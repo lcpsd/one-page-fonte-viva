@@ -1,24 +1,27 @@
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 import { cloneElement, ReactElement, ReactNode } from "react";
+import { useCurrentSectionContext } from "./currentSection/Context";
 
 interface ActiveLinksProps extends LinkProps{
     children: ReactElement;
 }
 
-export function ActiveLink({children, ...rest}: ActiveLinksProps){
+export function ActiveLink({children, href, ...rest}: ActiveLinksProps){
 
-    const {asPath} = useRouter()
+    const {currentSection} = useCurrentSectionContext()
     
     let isActive = false
 
-    String(asPath).includes(String(rest.href)) 
+    const linkHref = String(href).split("#")[1]
+
+    linkHref === currentSection
     && (isActive = true)
 
     return(
-        <Link {...rest}>
+        <Link {...rest} href={href}>
             {cloneElement(children, {
-                color: isActive ? "pink.400" : "gray.50"
+                color: isActive ? "blue.400" : "gray.50"
             })}
         </Link>
     )
