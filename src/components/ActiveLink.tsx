@@ -1,6 +1,6 @@
 import Link, { LinkProps } from "next/link";
-import { useRouter } from "next/router";
-import { cloneElement, ReactElement, ReactNode } from "react";
+import { cloneElement, ReactElement, ReactNode, useState } from "react";
+import { theme } from "../styles/theme";
 import { useCurrentSectionContext } from "./currentSection/Context";
 
 interface ActiveLinksProps extends LinkProps{
@@ -10,19 +10,26 @@ interface ActiveLinksProps extends LinkProps{
 export function ActiveLink({children, href, ...rest}: ActiveLinksProps){
 
     const {currentSection} = useCurrentSectionContext()
-    
-    let isActive = false
+    const [isActive, setIsActive] = useState(false)
 
     const linkHref = String(href).split("#")[1]
 
-    linkHref === currentSection
-    && (isActive = true)
+    linkHref === currentSection ? setIsActive(true) : setIsActive(false)
 
     return(
         <Link {...rest} href={href}>
             {cloneElement(children, {
-                color: isActive ? "blue.400" : "gray.50"
-            })}
+                className: "menuLink",
+                style:{
+                    color: isActive ? theme.colors.blue['500'] : theme.colors.gray['300'],
+                },
+                _hover:{
+                    color: 'blue.300',
+                    borderBottom: '1px',
+                    borderColor: 'blue.300'
+                },
+            })
+            }
         </Link>
     )
 }

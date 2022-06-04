@@ -1,47 +1,47 @@
-import {Box, Flex, HStack, Img, Text} from '@chakra-ui/react'
+import {Box, Flex, HStack, Img, Link, Text} from '@chakra-ui/react'
 import { ActiveLink } from './ActiveLink'
 
 export function Header(){
 
     return(
         <Box w="100%">
-            <Flex maxW="1120px" m="0 auto" h="80px" align="center" justify="space-between">
-                <Img src="/logo.png" h="100%"/>
-                <HStack>
+            <Flex maxW="1120px" m="0 auto" h="120px" align="center" justify="space-between" p="20px">
+                <Img src="/logo.png" h="58px"/>
+                <HStack spacing={10}>
                     <ActiveLink href="#home">
-                        <Text>Início</Text>
+                        <Link>Início</Link>
                     </ActiveLink>
 
                     <ActiveLink href="#history">
-                        <Text>História</Text>
+                        <Link>História</Link>
                     </ActiveLink>
 
                     <ActiveLink href="#vision">
-                        <Text>Visão</Text>
+                        <Link>Visão</Link>
                     </ActiveLink>
 
                     <ActiveLink href="#actions">
-                        <Text>Ações</Text>
+                        <Link>Ações</Link>
                     </ActiveLink>
 
                     <ActiveLink href="#pastors">
-                        <Text>Início</Text>
+                        <Link>Pastores</Link>
                     </ActiveLink>
 
                     <ActiveLink href="#hours">
-                        <Text>Pastorado</Text>
+                        <Link>Horários</Link>
                     </ActiveLink>
 
                     <ActiveLink href="#documents">
-                        <Text>Documentos</Text>
+                        <Link>Documentos</Link>
                     </ActiveLink>
 
                     <ActiveLink href="#financial">
-                        <Text>Financeiro</Text>
+                        <Link>Financeiro</Link>
                     </ActiveLink>
 
                     <ActiveLink href="#location">
-                        <Text>Localização</Text>
+                        <Link>Localização</Link>
                     </ActiveLink>
                 </HStack>
             </Flex>
