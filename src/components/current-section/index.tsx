@@ -15,7 +15,7 @@ export function CurrentSection(){
     const {currentSection, setCurrentSection} = useCurrentSectionContext()
 
     if(typeof window !== 'undefined'){
-        const allSections: NodeListOf<HTMLElement> = document.querySelectorAll('current-section-node')
+        const allSections: NodeListOf<HTMLElement> = document.querySelectorAll('.current-section-node')
 
         window.onscroll = () => {
     

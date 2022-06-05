@@ -1,7 +1,7 @@
 import Link, { LinkProps } from "next/link";
 import { cloneElement, ReactElement, ReactNode, useState } from "react";
 import { theme } from "../styles/theme";
-import { useCurrentSectionContext } from "./currentSection/Context";
+import { useCurrentSectionContext } from "./current-section/Context";
 
 interface ActiveLinksProps extends LinkProps{
     children: ReactElement;

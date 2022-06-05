@@ -1,5 +1,5 @@
 import { Flex } from "@chakra-ui/react";
-import { Section } from "../components/currentSection";
+import { Section } from "../components/current-section";
 import { Header } from "../components/Header";
 import { HeaderCarousel } from "../components/HeaderCarousel";
 import { InstagramCarousel } from "../components/InstagramCarousel";
