@@ -23,7 +23,7 @@ export function CurrentSection(){
     
                 const sectionOffsetTop = section.offsetTop
                 const sectionOffsetBottom = sectionOffsetTop + section.offsetHeight
-                const windowOffsetTop = window.scrollY + 80
+                const windowOffsetTop = window.scrollY + 200
     
                 if(sectionOffsetBottom >= windowOffsetTop && sectionOffsetTop <= windowOffsetTop){
                     currentSection !== section.id && section.id && setCurrentSection(section.id)
