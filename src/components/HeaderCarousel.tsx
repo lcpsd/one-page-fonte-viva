@@ -53,7 +53,17 @@ export function HeaderCarousel(){
                     {
                         slideImages.map(image => (
                             <SwiperSlide>
-                                <Img src={image.link} flex='1' w='100%' h='100%'/>
+                                <Img
+                                    padding="0"
+                                    src="/nobg.png"
+                                    flex='1'
+                                    w='100%'
+                                    h='100%'
+                                    bgImage={image.link}
+                                    bgPosition="center"
+                                    bgSize="cover"
+                                    bgRepeat="no-repeat"
+                                  />
                             </SwiperSlide>
                         ))
                     }
