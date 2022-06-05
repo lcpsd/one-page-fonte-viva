@@ -7,16 +7,18 @@ import { InstagramCarousel } from "../components/InstagramCarousel";
 export default function Home() {
 
   return (
-    <Flex direction='column'>
+    <>
       <Header />
-      <Section direction='column' h={'calc(100vh - 120px)'} id='home'>
-        <HeaderCarousel />
-        <InstagramCarousel />
-      </Section>
+      <Flex direction='column'>
+        <Section direction='column' h={'calc(100vh - 120px)'} id='home'>
+          <HeaderCarousel />
+          <InstagramCarousel />
+        </Section>
 
-      <Section h="100vh" id='history'>
+        <Section h="100vh" id='history'>
 
-      </Section>
-    </Flex>
+        </Section>
+      </Flex>
+    </>
   )
 }
