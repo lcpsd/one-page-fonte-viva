@@ -1,11 +1,21 @@
+import { Flex, FlexProps } from '@chakra-ui/react'
+import { ReactNode } from 'react'
 import {useCurrentSectionContext} from './Context'
+
+interface SectionProps extends FlexProps{
+    children:
+    | ReactNode
+    | JSX.Element[]
+    | string
+    | string[];
+}
 
 export function CurrentSection(){
     
     const {currentSection, setCurrentSection} = useCurrentSectionContext()
 
     if(typeof window !== 'undefined'){
-        const allSections = document.querySelectorAll('section')
+        const allSections: NodeListOf<HTMLElement> = document.querySelectorAll('current-section-node')
 
         window.onscroll = () => {
     
@@ -23,4 +33,12 @@ export function CurrentSection(){
     }
 
     return(<></>)
+}
+
+export function Section({children, id, ...rest}: SectionProps){
+    return(
+        <Flex id={id} {...rest} className='current-section-node'>
+            {children}
+        </Flex>
+    )
 }

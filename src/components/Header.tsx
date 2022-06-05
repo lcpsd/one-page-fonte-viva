@@ -4,7 +4,7 @@ import { ActiveLink } from './ActiveLink'
 export function Header(){
 
     return(
-        <Box w="100%">
+        <Box w="100%" position='static'>
             <Flex maxW="1120px" m="0 auto" h="120px" align="center" justify="space-between" p="20px">
                 <Img src="/logo.png" h="58px"/>
                 <HStack spacing={10}>

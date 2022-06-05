@@ -5,7 +5,7 @@ export const CurrentSectionContext = createContext()
 
 export function CurrentSectionContextProvider({children}){
 
-    const [currentSection, setCurrentSection] = useState("headerSection")
+    const [currentSection, setCurrentSection] = useState("home")
 
     return(
         <CurrentSectionContext.Provider value={{

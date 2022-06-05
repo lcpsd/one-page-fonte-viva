@@ -1,0 +1,6 @@
+#home .swiper-pagination-bullet{
+    width: 100%;
+    max-width: 200px;
+    border-radius: 5px;
+    background: #fff;
+}

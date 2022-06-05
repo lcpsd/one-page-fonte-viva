@@ -10,11 +10,12 @@ interface ActiveLinksProps extends LinkProps{
 export function ActiveLink({children, href, ...rest}: ActiveLinksProps){
 
     const {currentSection} = useCurrentSectionContext()
-    const [isActive, setIsActive] = useState(false)
+
+    let isActive = false
 
     const linkHref = String(href).split("#")[1]
 
-    linkHref === currentSection ? setIsActive(true) : setIsActive(false)
+    if(linkHref === currentSection) isActive = true
 
     return(
         <Link {...rest} href={href}>
@@ -22,6 +23,7 @@ export function ActiveLink({children, href, ...rest}: ActiveLinksProps){
                 className: "menuLink",
                 style:{
                     color: isActive ? theme.colors.blue['500'] : theme.colors.gray['300'],
+                    borderBottom: isActive ? `2px solid ${theme.colors.blue['500']}` : '',
                 },
                 _hover:{
                     color: 'blue.300',
