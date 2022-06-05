@@ -16,7 +16,7 @@ export default function Home() {
         </Section>
 
         <Section h="100vh" id='history'>
-
+          
         </Section>
       </Flex>
     </>

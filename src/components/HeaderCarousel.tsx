@@ -52,7 +52,7 @@ export function HeaderCarousel(){
                 >
                     {
                         slideImages.map(image => (
-                            <SwiperSlide>
+                            <SwiperSlide key={image.id}>
                                 <Img
                                     padding="0"
                                     src="/nobg.png"

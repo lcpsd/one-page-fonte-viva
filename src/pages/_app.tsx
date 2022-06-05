@@ -6,6 +6,7 @@ import { theme } from "../styles/theme"
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation'
 import { CurrentSection } from "../components/current-section";
 
 function MyApp({ Component, pageProps }: AppProps) {
