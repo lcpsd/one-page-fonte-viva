@@ -1,7 +1,26 @@
 import { Flex, Img } from '@chakra-ui/react';
 import { A11y, Pagination } from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
-import { CustomCarousel } from './styles';
+import styled from 'styled-components'
+
+const CustomCarousel = styled.span`
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    
+    .swiper{
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-pagination-bullet{
+        background-color: #fff;
+
+        width: 200px;
+        border-radius: 5px;
+    }
+`
 
 export function HeaderCarousel(){
 
@@ -25,7 +44,7 @@ export function HeaderCarousel(){
     ]
 
     return(
-        <Flex w='100%' h='550px' className='carousel'>
+        <Flex w='100%' h='550px' width='100%' maxW='1500px' m='0 auto' className='carousel'>
             <CustomCarousel>
                 <Swiper
                 modules={[Pagination, A11y]}
@@ -34,7 +53,7 @@ export function HeaderCarousel(){
                     {
                         slideImages.map(image => (
                             <SwiperSlide>
-                                <Img src={image.link} flex='1' w='100%'/>
+                                <Img src={image.link} flex='1' w='100%' h='100%'/>
                             </SwiperSlide>
                         ))
                     }
