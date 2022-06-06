@@ -6,10 +6,12 @@ import { Header } from "../components/Header";
 import { HeaderCarousel } from "../components/HeaderCarousel";
 import { InstagramCarousel } from "../components/InstagramCarousel";
 import { HourCard } from "../components/HourCard";
-import {BiLinkExternal} from 'react-icons/bi'
 import Link from "next/link";
 import { DocumentCard } from "../components/DocumentCard";
 import { FinancialCard } from "../components/FinancialCard";
+import {BsFacebook, BsYoutube} from 'react-icons/bs'
+import {AiFillInstagram} from 'react-icons/ai'
+import {IoLogoWhatsapp} from 'react-icons/io5'
 
 export default function Home() {
 
@@ -280,7 +282,7 @@ export default function Home() {
           </SimpleGrid>
         </Section>
 
-        <Section id="location" h="90vh" w="100%" maxW="1200px" m="0 auto" justify="center" align="center">
+        <Section id="location" h="80vh" w="100%" maxW="1200px" m="0 auto" justify="center" align="center">
           <SimpleGrid spacing={10} columns={2}>
             <Img src="/images/map.png"/>
             <Flex color="white" justify="center" direction="column">
@@ -292,9 +294,30 @@ export default function Home() {
               </Text>
             </Flex>
           </SimpleGrid>
-          
         </Section>
+        
+        <Flex color="white" align="center" w="100%" maxW="1500px" p="10px">
+            <Text flex="3" textAlign="center">13.425.720/0001-40 | Igreja Evangelica Fonte Viva</Text>
+            <Img src="/logo.png" h="100px" w="100px" mx="8rem"/>
+            <SimpleGrid columns={4} spacing={10} flex="3" fontSize="2rem">
 
+              <Link href="">
+                <Icon as={BsYoutube}/>
+              </Link>
+
+              <Link href="">
+                <Icon as={AiFillInstagram}/>
+              </Link>
+
+              <Link href="">
+                <Icon as={BsFacebook}/>
+              </Link>
+
+              <Link href="">
+                <Icon as={IoLogoWhatsapp}/>
+              </Link>
+            </SimpleGrid>
+        </Flex>
       </Flex>
     </>
   )
