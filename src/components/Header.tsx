@@ -4,7 +4,7 @@ import { ActiveLink } from './ActiveLink'
 export function Header(){
 
     return(
-        <Box bg='black' w="100%" style={{
+        <Box bg='black' w="100%" border="1px" borderBottom="gray.900" style={{
             position: 'sticky',
             top: 0,
             zIndex: 20
