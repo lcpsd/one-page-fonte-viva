@@ -13,6 +13,9 @@ export const theme = extendTheme({
       body: 'Poppins'
     },
     colors: {
+      blue:{
+        '500': '#38B8FF'
+      },
       gray: {
         '50': '#EEEEF2',
         '100': '#D1D2DC',
