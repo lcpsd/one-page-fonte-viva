@@ -283,7 +283,7 @@ export default function Home() {
           </SimpleGrid>
         </Section>
 
-        <Section id="location" h="80vh" w="100%" maxW="1200px" m="0 auto" justify="center" align="center">
+        <Section id="location" h="75vh" w="100%" maxW="1200px" m="0 auto" justify="center" align="center">
           <SimpleGrid spacing={10} columns={2}>
             <Img src="/images/map.png"/>
             <Flex color="white" justify="center" direction="column">
