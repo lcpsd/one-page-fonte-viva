@@ -12,6 +12,7 @@ import { FinancialCard } from "../components/FinancialCard";
 import {BsFacebook, BsYoutube} from 'react-icons/bs'
 import {AiFillInstagram} from 'react-icons/ai'
 import {IoLogoWhatsapp} from 'react-icons/io5'
+import { Footer } from "../components/Footer";
 
 export default function Home() {
 
@@ -296,28 +297,7 @@ export default function Home() {
           </SimpleGrid>
         </Section>
         
-        <Flex color="white" align="center" w="100%" maxW="1500px" p="10px">
-            <Text flex="3" textAlign="center">13.425.720/0001-40 | Igreja Evangelica Fonte Viva</Text>
-            <Img src="/logo.png" h="100px" w="100px" mx="8rem"/>
-            <SimpleGrid columns={4} spacing={10} flex="3" fontSize="2rem">
-
-              <Link href="">
-                <Icon as={BsYoutube}/>
-              </Link>
-
-              <Link href="">
-                <Icon as={AiFillInstagram}/>
-              </Link>
-
-              <Link href="">
-                <Icon as={BsFacebook}/>
-              </Link>
-
-              <Link href="">
-                <Icon as={IoLogoWhatsapp}/>
-              </Link>
-            </SimpleGrid>
-        </Flex>
+        <Footer />
       </Flex>
     </>
   )
