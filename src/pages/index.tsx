@@ -1,5 +1,6 @@
 import { Box, Flex, Img, Text } from "@chakra-ui/react";
 import { Section } from "../components/current-section";
+import { DescriptionSection } from "../components/DescriptionSection";
 import { Header } from "../components/Header";
 import { HeaderCarousel } from "../components/HeaderCarousel";
 import { InstagramCarousel } from "../components/InstagramCarousel";
@@ -15,20 +16,10 @@ export default function Home() {
           <InstagramCarousel />
         </Section>
 
-        <Section 
-        h={'calc(100vh - 120px)'} 
-        id='history' 
-        bg="red" 
-        m="0 auto" 
-        w="100%" 
-        maxW="1500px" 
-        bgImage="/images/fachada-igreja.png" 
-        bgColor="green" 
-        bgPosition="center" 
-        bgSize='cover' 
-        bgRepeat='no-repeat'
+        <DescriptionSection
+        bgImageLink="/images/fachada-igreja.png"
+        id='history'
         justify='flex-end'
-        position='relative'
         >
           <Box h="100%" w="100%" maxW='800px' bgGradient='linear(to-l, black, transparent)' position='absolute'></Box>
           <Flex direction='column' align='flex-end' zIndex='10' justify='center' p='20px'>
@@ -41,21 +32,11 @@ export default function Home() {
               Somos uma igreja em células, uma família para pertencer e nossa missão é servir e inspirar pessoas.
               </Text>
           </Flex>
-        </Section>
+        </DescriptionSection>
 
-        <Section 
-        h={'calc(100vh - 120px)'} 
-        id='vision' 
-        bg="red" 
-        m="0 auto" 
-        w="100%" 
-        maxW="1500px" 
-        bgImage="/images/elias.jpg" 
-        bgColor="green" 
-        bgPosition="center" 
-        bgSize='cover' 
-        bgRepeat='no-repeat'
-        position='relative'
+        <DescriptionSection
+        id="vision"
+        bgImageLink="/images/elias.jpg"
         >
           <Box h="100%" w="100%" maxW='800px' bgGradient='linear(to-r, black, transparent)' position='absolute' left='0'></Box>
           <Flex direction='column' zIndex='10' justify='center' p='20px'>
@@ -66,7 +47,7 @@ export default function Home() {
             Nosso objetivo é fazer discípulos, mas também cuidar bem deles, de acordo com a sua necessidade e desta forma, conseguimos atender a todos os públicos.
               </Text>
           </Flex>
-        </Section>
+        </DescriptionSection>
       </Flex>
     </>
   )
