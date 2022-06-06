@@ -15,10 +15,10 @@ const CustomCarousel = styled.span`
     }
 
     .swiper-pagination-bullet{
-        background-color: #fff;
-
-        width: 200px;
+        background-color: "#38B8FF";
+        width: 50px;
         border-radius: 5px;
+        opacity: 1;
     }
 `
 
@@ -44,7 +44,7 @@ export function HeaderCarousel(){
     ]
 
     return(
-        <Flex w='100%' h='550px' width='100%' maxW='1500px' m='0 auto' className='carousel'>
+        <Flex w={['100vw', null, "100%"]} h='550px' maxW='1500px' m='0 auto' className='carousel'>
             <CustomCarousel>
                 <Swiper
                 modules={[Pagination, A11y]}
