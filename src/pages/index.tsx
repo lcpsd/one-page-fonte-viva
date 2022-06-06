@@ -45,7 +45,7 @@ export default function Home() {
 
         <Section 
         h={'calc(100vh - 120px)'} 
-        id='history' 
+        id='vision' 
         bg="red" 
         m="0 auto" 
         w="100%" 

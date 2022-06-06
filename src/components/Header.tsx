@@ -7,7 +7,7 @@ export function Header(){
         <Box bg='black' w="100%" style={{
             position: 'sticky',
             top: 0,
-            zIndex: 10
+            zIndex: 20
         }}>
             <Flex maxW="1120px" m="0 auto" h="120px" align="center" justify="space-between" p="20px">
                 <Img src="/logo.png" h="58px"/>
