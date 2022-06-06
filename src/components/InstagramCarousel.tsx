@@ -79,7 +79,7 @@ export function InstagramCarousel(){
                 >
                     {
                         posts.map(post => (
-                            <SwiperSlide>
+                            <SwiperSlide key={post.id}>
                                 <Img src={post.img_link} h="100%" w="auto"/>
                                 <Text
                                     h="100px"

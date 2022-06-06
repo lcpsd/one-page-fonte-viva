@@ -1,6 +1,7 @@
+import { ChakraProps, ChakraStyledOptions } from "@chakra-ui/react";
 import { Section } from "./current-section";
 
-interface DesriptionSectionProps{
+interface DesriptionSectionProps extends ChakraStyledOptions{
     children: JSX.Element | JSX.Element[];
     id: string;
     bgImageLink: string;
