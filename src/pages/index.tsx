@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Img, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Flex, HStack, Icon, Img, SimpleGrid, Text } from "@chakra-ui/react";
 import { VerticalCarousel } from "../components/VerticalCarousel";
 import { Section } from "../components/current-section";
 import { DescriptionSection } from "../components/DescriptionSection";
@@ -6,6 +6,10 @@ import { Header } from "../components/Header";
 import { HeaderCarousel } from "../components/HeaderCarousel";
 import { InstagramCarousel } from "../components/InstagramCarousel";
 import { HourCard } from "../components/HourCard";
+import {BiLinkExternal} from 'react-icons/bi'
+import Link from "next/link";
+import { DocumentCard } from "../components/DocumentCard";
+import { FinancialCard } from "../components/FinancialCard";
 
 export default function Home() {
 
@@ -138,6 +142,50 @@ export default function Home() {
     },
   ]
 
+  const documents = [
+    {
+      id: 1,
+      title: "Casa Viva",
+      link:""
+    },
+    {
+      id: 2,
+      title: "Batismo",
+      link:""
+    },
+    {
+      id: 3,
+      title: "Visão",
+      link:""
+    },
+    {
+      id: 4,
+      title: "eBooks",
+      link:""
+    },
+  ]
+
+  const financial = [
+    {
+      id: 1,
+      title:"PIX",
+      description:"ipsc4c917fb-17df-4f5b-88d4-6a3345c4a31d",
+      image_link: "/images/pix-logo.png"
+    },
+    {
+      id: 2,
+      title:"Bradesco",
+      description:"AG: 073\nCC: 677-7",
+      image_link: "/images/bradesco-logo.jpg"
+    },
+    {
+      id: 3,
+      title:"Caixa Econômica",
+      description:"AG: 3658\nOP: 003\nCC: 34-6",
+      image_link: "/images/caixa-logo.png"
+    },
+  ]
+
   return (
     <>
       <Header />
@@ -198,6 +246,40 @@ export default function Home() {
             }
           </SimpleGrid>
         </Section>
+
+        <Section id="documents" h="90vh" w="100%" maxW="1500px" m="0 auto" direction="column" justify="center" align="center">
+          <Text fontSize="2xl" fontWeight="bold" color="blue.500" textAlign="center" mb="1rem">Documentos</Text>
+          <SimpleGrid columns={4} spacing={10}>
+            {
+              documents.map(document => (
+                <DocumentCard data={document}/>
+              ))
+            }
+          </SimpleGrid>
+        </Section>
+
+        <Section id="documents" h="90vh" w="100%" maxW="1500px" m="0 auto" direction="column" justify="center" align="center">
+          <Text fontSize="2xl" fontWeight="bold" color="blue.500" textAlign="center" mb="1rem">Documentos</Text>
+          <SimpleGrid columns={4} spacing={10}>
+            {
+              documents.map(document => (
+                <DocumentCard data={document}/>
+              ))
+            }
+          </SimpleGrid>
+        </Section>
+
+        <Section id="financial" h="90vh" w="100%" maxW="1200px" m="0 auto" direction="column" justify="center" align="center">
+          <Text fontSize="2xl" fontWeight="bold" color="blue.500" textAlign="center" mb="1rem">Financeiro</Text>
+          <SimpleGrid columns={3} spacing={10} w="100%">
+            {
+              financial.map(data => (
+                <FinancialCard data={data} copy/>
+              ))
+            }
+          </SimpleGrid>
+        </Section>
+
       </Flex>
     </>
   )
