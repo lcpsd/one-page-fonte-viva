@@ -53,6 +53,51 @@ export default function Home() {
       }
   ]
 
+  const pastors = [
+    {
+        id: 1,
+        title:"Pr. Jhonatan",
+        description: "Viva Mulheres",
+        image_link: "https://random.imagecdn.app/1280/720"
+    },
+    {
+        id: 2,
+        title:"Pr. Luiz",
+        description: "Atmosfera",
+        image_link: "https://random.imagecdn.app/1280/720"
+    },
+    {
+        id: 3,
+        title:"Pra. Talyssa",
+        description: "Atmosfera",
+        image_link: "https://random.imagecdn.app/1280/720"
+    },
+    {
+        id: 4,
+        title:"Pra. Elaine",
+        description: "Viva Mulheres",
+        image_link: "https://random.imagecdn.app/1280/720"
+    },
+    {
+        id: 5,
+        title:"Pra. Adriana",
+        description: "Amor Mulheres",
+        image_link: "https://random.imagecdn.app/1280/720"
+    },
+    {
+        id: 6,
+        title:"Pr. Elias",
+        description: "Apóstolo",
+        image_link: "https://random.imagecdn.app/1280/720"
+    },
+    {
+        id: 7,
+        title:"Pr. José",
+        description: "Shalom",
+        image_link: "https://random.imagecdn.app/1280/720"
+    }
+]
+
   return (
     <>
       <Header />
@@ -95,7 +140,13 @@ export default function Home() {
           </Flex>
         </DescriptionSection>
 
-        <VerticalCarousel data={actions}/>
+        <Section id="actions">
+          <VerticalCarousel data={actions} carouselTitle="Ações"/>
+        </Section>
+        
+        <Section id="pastors">
+          <VerticalCarousel data={actions} carouselTitle="Redes Pastorais"/>
+        </Section>
       </Flex>
     </>
   )

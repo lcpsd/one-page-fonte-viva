@@ -13,7 +13,7 @@ export function VerticalCard({title, description, image_link, currentIndex, slid
     return(
         <Flex
             maxW="378px"
-            h={currentIndex + 1 == slideIndex || currentIndex + 2 == slideIndex ? "920px" : "839px"}
+            h={currentIndex + 1 == slideIndex || currentIndex + 2 == slideIndex ? "800px" : "700px"}
             bgImage={image_link}
             bgPos="center"
             bgSize="cover"

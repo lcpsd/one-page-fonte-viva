@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@chakra-ui/react'
+import { Box, ChakraStyledOptions, Flex, Text } from '@chakra-ui/react'
 import { useState } from 'react'
 import styled from 'styled-components'
 import { A11y, Navigation } from 'swiper'
@@ -21,14 +21,28 @@ interface DataProps {
 
 interface VerticalCarouselProps{
     data: DataProps[];
+    carouselTitle: string;
 }
 
-export function VerticalCarousel({data}: VerticalCarouselProps){
+export function VerticalCarousel({data, carouselTitle}: VerticalCarouselProps){
 
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
 
     return(
-        <CustomCarousel w="100%" maxW="1500px" h="100%" m="0 auto">
+        <CustomCarousel w="100%" maxW="1500px" h="100%" m="0 auto" position="relative">
+            <Text
+              position="absolute"
+              left="0"
+              right="0"
+              mt="10px"
+              fontSize="1.5rem"
+              fontWeight="bold"
+              color="white"
+              zIndex="10"
+              textAlign="center"
+              >
+                  {carouselTitle}
+                </Text>
             <Swiper
             modules={[Navigation, A11y]}
             navigation
