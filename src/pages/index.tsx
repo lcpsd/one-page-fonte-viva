@@ -280,6 +280,21 @@ export default function Home() {
           </SimpleGrid>
         </Section>
 
+        <Section id="location" h="90vh" w="100%" maxW="1200px" m="0 auto" justify="center" align="center">
+          <SimpleGrid spacing={10} columns={2}>
+            <Img src="/images/map.png"/>
+            <Flex color="white" justify="center" direction="column">
+              <Text fontSize="2xl" fontWeight="bold" color="blue.500">Visite-nos</Text>
+              <Text>
+              Rua: Avenida Mascarenhas de Moraes, 6854 <br/>
+              Bairro: São Francisco<br/>
+              Cidade: Campo Grande - MS
+              </Text>
+            </Flex>
+          </SimpleGrid>
+          
+        </Section>
+
       </Flex>
     </>
   )
