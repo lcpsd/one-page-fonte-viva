@@ -8,8 +8,9 @@ export function Header(){
     const {openMenu, setOpenMenu} = useMenuContext()
 
     return(
-        <Box bg='black' w="100vw" border="1px" borderBottom="gray.900" position={{ base:"absolute", lg:"sticky" }} style={{
+        <Box bg='black' w="100vw" borderBottom="1px" borderBottomColor="gray.900" position={{ base:"absolute", lg:"sticky" }} style={{
             top: 0,
+            left: 0,
             zIndex: 30
         }}>
             <Flex
@@ -29,7 +30,7 @@ export function Header(){
                 <Flex 
                 display="flex" 
                 direction={{base:"column", lg:"row"}} 
-                gap="40px" 
+                gap={{base: "20px", lg: "40px" }}
                 textAlign={{base:"center", lg:"initial"}} 
                 fontSize={{base:"1.5rem", lg:"1rem"}}>
                     <ActiveLink href="#home">
