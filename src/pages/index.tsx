@@ -198,6 +198,7 @@ export default function Home() {
           <InstagramCarousel />
         </Section>
 
+        {/* Descriptions */}
         <DescriptionSection
         bgImageLink="/images/fachada-igreja.png"
         id='history'
@@ -231,17 +232,20 @@ export default function Home() {
           </Flex>
         </DescriptionSection>
 
+        {/* Actions */}
         <Section id="actions">
           <VerticalCarousel data={actions} carouselTitle="Ações"/>
         </Section>
         
+        {/* Pastors */}
         <Section id="pastors">
           <VerticalCarousel data={pastors} carouselTitle="Redes Pastorais"/>
         </Section>
 
-        <Section id="hours" h="90vh" w="100%" maxW="1500px" m="0 auto" direction="column" justify="center" align="center">
+        {/* Hours */}
+        <Section id="hours" h="90vh" w="100%" maxW="1500px" m="0 auto" direction="column" justify="center" align="center" px="20px">
           <Text fontSize="2xl" fontWeight="bold" color="blue.500" textAlign="center">Horários</Text>
-          <SimpleGrid columns={3} spacing={5} h="300px">
+          <SimpleGrid columns={{sm: 1, lg: 3}} spacing={5} h="300px">
             {
               hours.map(hour => (
                 <HourCard hourData={hour}/>
@@ -249,7 +253,8 @@ export default function Home() {
             }
           </SimpleGrid>
         </Section>
-
+        
+        {/* Documents */}
         <Section id="documents" h="90vh" w="100%" maxW="1500px" m="0 auto" direction="column" justify="center" align="center">
           <Text fontSize="2xl" fontWeight="bold" color="blue.500" textAlign="center" mb="1rem">Documentos</Text>
           <SimpleGrid columns={4} spacing={10}>
