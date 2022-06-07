@@ -71,7 +71,18 @@ export function Header(){
                 </Flex>
             </Flex>
 
-            <Flex position="fixed" right="1.5rem" top="1.5rem" onClick={() => setOpenMenu(!openMenu)} display={{base: "block", lg:"none"}}>
+            <Flex
+              position="fixed"
+              right="1.5rem"
+              onClick={() => setOpenMenu(!openMenu)}
+              display={{base: "flex", lg:"none"}}
+              w="100%"
+              left="0"
+              top="0"
+              p="10px"
+              align="center"
+              justify={!openMenu ? "space-between": "right"}>
+                <Img src="/logo.png" h="50px" opacity={0.3} display={!openMenu ? "block": "none"}/>
                 <Icon as={!openMenu ? AiOutlineMenu : AiOutlineClose} color="white" fontSize="2rem" fontWeight="light"/>
             </Flex>
         </Box>
