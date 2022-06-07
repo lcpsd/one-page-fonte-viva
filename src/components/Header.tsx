@@ -8,30 +8,30 @@ export function Header(){
     const [openMenu, setOpenMenu] = useState(false)
 
     return(
-        <Box bg='black' w="100%" border="1px" borderBottom="gray.900" position={["absolute",null, "sticky"]} style={{
+        <Box bg='black' w="100vw" border="1px" borderBottom="gray.900" position={{ sm:"absolute", lg:"sticky" }} style={{
             top: 0,
             zIndex: 30
         }}>
             <Flex
                 bg="black"
                 maxW="1120px"
-                w={["100%",null, "initial"]}
+                w={{sm:"100%", lg:"initial"}}
                 m="0 auto"
-                h={["100vh", null, "120px"]}
+                h={{sm:"100vh", lg:"120px"}}
                 align="center"
-                justify={["center",null, "space-between"]}
+                justify={{sm:"center", lg:"space-between"}}
                 p="20px"
-                display={[openMenu ? "flex" : "none", null, "flex"]}
-                direction={["column",null, "row"]}
-                position={["fixed", null, "initial"]}
+                display={openMenu ? "flex" : {sm: "none", lg: "flex"}}
+                direction={{sm:"column", lg:"row"}}
+                position={{sm:"fixed", lg:"initial"}}
             >
-                <Img src="/logo.png" h="58px" mb={["1.5rem",null, "0"]}/>
+                <Img src="/logo.png" h="58px" mb={{sm:"1.5rem", lg:"0"}}/>
                 <Flex 
                 display="flex" 
-                direction={["column", null, "row"]} 
+                direction={{sm:"column", lg:"row"}} 
                 gap="40px" 
-                textAlign={["center",null, "initial"]} 
-                fontSize={["1.5rem", null, "1rem"]}>
+                textAlign={{sm:"center", lg:"initial"}} 
+                fontSize={{sm:"1.5rem", lg:"1rem"}}>
                     <ActiveLink href="#home">
                         <Link>Início</Link>
                     </ActiveLink>
@@ -70,7 +70,7 @@ export function Header(){
                 </Flex>
             </Flex>
 
-            <Flex position="fixed" right="1.5rem" top="1.5rem" onClick={() => setOpenMenu(!openMenu)} display={["block", null, "none"]}>
+            <Flex position="fixed" right="1.5rem" top="1.5rem" onClick={() => setOpenMenu(!openMenu)} display={{sm:"block", lg:"none"}}>
                 <Icon as={!openMenu ? AiOutlineMenu : AiOutlineClose} color="white" fontSize="2rem" fontWeight="light"/>
             </Flex>
         </Box>
