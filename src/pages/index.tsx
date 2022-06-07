@@ -267,9 +267,9 @@ export default function Home() {
         </Section>
         
         {/* Financial */}
-        <Section id="financial" h="90vh" w="100%" maxW="1200px" m="0 auto" direction="column" justify="center" align="center">
+        <Section id="financial" h="90vh" w="100%" maxW="1200px" m="0 auto" direction="column" justify="center" align="center" px="40px">
           <Text fontSize="2xl" fontWeight="bold" color="blue.500" textAlign="center" mb="1rem">Financeiro</Text>
-          <SimpleGrid columns={3} spacing={10} w="100%">
+          <SimpleGrid columns={{sm: 1, lg: 3}} spacing={10} w="100%">
             {
               financial.map(data => (
                 <FinancialCard data={data} copy/>
