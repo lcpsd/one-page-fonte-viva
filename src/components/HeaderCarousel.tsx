@@ -44,7 +44,7 @@ export function HeaderCarousel(){
     ]
 
     return(
-        <Flex w={['100vw', null, "100%"]} h='500px' maxW='1500px' m='0 auto' className='carousel'>
+        <Flex w={'100vw'} h='500px' maxW='1500px' m='0 auto' className='carousel'>
             <CustomCarousel>
                 <Swiper
                 modules={[Pagination, A11y]}
