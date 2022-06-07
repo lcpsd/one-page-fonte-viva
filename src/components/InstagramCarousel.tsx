@@ -69,19 +69,30 @@ export function InstagramCarousel(){
     ]
 
     return(
-        <Flex w='100%' maxW="1500px" m="0 auto" mb="10px">
+        <Flex w={['100vw']} maxW="1500px" m="0 auto" mb="10px">
             <CustomCarousel py="10px" w="100%" h="100%" m="0 auto">
                 <Swiper
                 modules={[Navigation, A11y]}
                 spaceBetween={10}
                 navigation
-                slidesPerView={5}
+                breakpoints={{
+                    640: {
+                        slidesPerView: 1,
+                      },
+                      768: {
+                        slidesPerView: 2,
+                      },
+                      1024: {
+                        slidesPerView: 5,
+                      },
+                }}
                 >
                     {
                         posts.map(post => (
                             <SwiperSlide key={post.id}>
                                 <Img src={post.img_link} h="100%" w="auto"/>
                                 <Text
+                                    w="100%"
                                     h="100px"
                                     position="absolute"
                                     bottom="0"
