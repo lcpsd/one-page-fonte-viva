@@ -1,11 +1,11 @@
-import {Box, Flex, HStack, Icon, IconButton, Img, Link, Menu, MenuButton, MenuItem, MenuList} from '@chakra-ui/react'
+import {Box, Flex, Icon, Img, Link} from '@chakra-ui/react'
 import { ActiveLink } from './ActiveLink'
-import { useState } from 'react'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
+import { useMenuContext } from '../contexts/MenuContext'
 
 export function Header(){
 
-    const [openMenu, setOpenMenu] = useState(false)
+    const {openMenu, setOpenMenu} = useMenuContext()
 
     return(
         <Box bg='black' w="100vw" border="1px" borderBottom="gray.900" position={{ sm:"absolute", lg:"sticky" }} style={{

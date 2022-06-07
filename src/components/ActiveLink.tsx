@@ -1,5 +1,6 @@
 import Link, { LinkProps } from "next/link";
 import { cloneElement, ReactElement, ReactNode, useState } from "react";
+import { useMenuContext } from "../contexts/MenuContext";
 import { theme } from "../styles/theme";
 import { useCurrentSectionContext } from "./current-section/Context";
 
@@ -10,6 +11,7 @@ interface ActiveLinksProps extends LinkProps{
 export function ActiveLink({children, href, ...rest}: ActiveLinksProps){
 
     const {currentSection} = useCurrentSectionContext()
+    const {setOpenMenu} = useMenuContext()
 
     let isActive = false
 
@@ -20,6 +22,7 @@ export function ActiveLink({children, href, ...rest}: ActiveLinksProps){
     return(
         <Link {...rest} href={href}>
             {cloneElement(children, {
+                onClick: () => setOpenMenu(false),
                 className: "menuLink",
                 style:{
                     color: isActive ? theme.colors.blue['500'] : theme.colors.gray['300'],
