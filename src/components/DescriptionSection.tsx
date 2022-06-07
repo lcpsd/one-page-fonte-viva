@@ -11,7 +11,7 @@ export function DescriptionSection({children, id, bgImageLink, ...rest}: Desript
     return(
         <Section
         minH="90vh"
-        h={{base: "100vh", lg:"100%"}}
+        h="100%"
         id={id}
         m="0 auto"
         w="100%" 
