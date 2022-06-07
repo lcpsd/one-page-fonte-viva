@@ -2,6 +2,7 @@ import { Box, Flex, Icon, Img, Link, SimpleGrid, Text } from "@chakra-ui/react";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsFacebook, BsYoutube } from "react-icons/bs";
 import { IoLogoWhatsapp } from "react-icons/io5";
+import { FooterIcon } from "./FooterIcon";
 
 export function Footer(){
 
@@ -12,21 +13,14 @@ export function Footer(){
                 <Img src="/logo.png" h="100px" w="100px" mx="8rem"/>
                 <SimpleGrid columns={4} spacing={10} flex="3" fontSize="2rem">
 
-                <Link href="">
-                    <Icon as={BsYoutube}/>
-                </Link>
+                    <FooterIcon icon={BsYoutube} link=""/>
 
-                <Link href="">
-                    <Icon as={AiFillInstagram}/>
-                </Link>
+                    <FooterIcon icon={AiFillInstagram} link=""/>
 
-                <Link href="">
-                    <Icon as={BsFacebook}/>
-                </Link>
+                    <FooterIcon icon={BsFacebook} link=""/>
 
-                <Link href="">
-                    <Icon as={IoLogoWhatsapp}/>
-                </Link>
+                    <FooterIcon icon={IoLogoWhatsapp} link=""/>
+
                 </SimpleGrid>
             </Flex>
         </Box>

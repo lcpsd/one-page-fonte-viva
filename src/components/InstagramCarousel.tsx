@@ -69,7 +69,7 @@ export function InstagramCarousel(){
     ]
 
     return(
-        <Flex flex='1'  w='100%' maxW="1500px" m="0 auto">
+        <Flex w='100%' maxW="1500px" m="0 auto" mb="10px">
             <CustomCarousel py="10px" w="100%" h="100%" m="0 auto">
                 <Swiper
                 modules={[Navigation, A11y]}

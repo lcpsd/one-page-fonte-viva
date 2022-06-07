@@ -31,7 +31,7 @@ export function Header(){
                 direction={["column", null, "row"]} 
                 gap="40px" 
                 textAlign={["center",null, "initial"]} 
-                fontSize={["1rem", "1.5rem"]}>
+                fontSize={["1.5rem", null, "1rem"]}>
                     <ActiveLink href="#home">
                         <Link>Início</Link>
                     </ActiveLink>
