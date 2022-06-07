@@ -8,7 +8,6 @@ interface DesriptionSectionProps extends ChakraStyledOptions{
 }
 
 export function DescriptionSection({children, id, bgImageLink, ...rest}: DesriptionSectionProps){
-
     return(
         <Section
         minH="90vh"
