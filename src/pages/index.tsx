@@ -279,8 +279,8 @@ export default function Home() {
         </Section>
         
         {/* Location */}
-        <Section id="location" h="75vh" w="100%" maxW="1200px" m="0 auto" justify="center" align="center">
-          <SimpleGrid spacing={10} columns={2}>
+        <Section id="location" h="100%" minH="75vh" w="100%" maxW="1200px" m="0 auto" justify="center" align="center" p="40px">
+          <SimpleGrid spacing={10} columns={{sm: 1, lg: 2}}>
             <Img src="/images/map.png"/>
             <Flex color="white" justify="center" direction="column">
               <Text fontSize="2xl" fontWeight="bold" color="blue.500">Visite-nos</Text>
