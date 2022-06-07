@@ -257,7 +257,7 @@ export default function Home() {
         {/* Documents */}
         <Section id="documents" h="90vh" w="100%" maxW="1500px" m="0 auto" direction="column" justify="center" align="center">
           <Text fontSize="2xl" fontWeight="bold" color="blue.500" textAlign="center" mb="1rem">Documentos</Text>
-          <SimpleGrid columns={4} spacing={10}>
+          <SimpleGrid columns={{sm: 1, lg: 4}} spacing={10}>
             {
               documents.map(document => (
                 <DocumentCard data={document}/>
@@ -265,18 +265,8 @@ export default function Home() {
             }
           </SimpleGrid>
         </Section>
-
-        <Section id="documents" h="90vh" w="100%" maxW="1500px" m="0 auto" direction="column" justify="center" align="center">
-          <Text fontSize="2xl" fontWeight="bold" color="blue.500" textAlign="center" mb="1rem">Documentos</Text>
-          <SimpleGrid columns={4} spacing={10}>
-            {
-              documents.map(document => (
-                <DocumentCard data={document}/>
-              ))
-            }
-          </SimpleGrid>
-        </Section>
-
+        
+        {/* Financial */}
         <Section id="financial" h="90vh" w="100%" maxW="1200px" m="0 auto" direction="column" justify="center" align="center">
           <Text fontSize="2xl" fontWeight="bold" color="blue.500" textAlign="center" mb="1rem">Financeiro</Text>
           <SimpleGrid columns={3} spacing={10} w="100%">
@@ -287,7 +277,8 @@ export default function Home() {
             }
           </SimpleGrid>
         </Section>
-
+        
+        {/* Location */}
         <Section id="location" h="75vh" w="100%" maxW="1200px" m="0 auto" justify="center" align="center">
           <SimpleGrid spacing={10} columns={2}>
             <Img src="/images/map.png"/>

@@ -13,7 +13,7 @@ interface DocumentCardProps{
 export function DocumentCard({data}: DocumentCardProps){
 
     return(
-        <HStack spacing={10} bg="gray.900" color="blue.500" padding="20px" borderRadius="5px">
+        <HStack spacing={10} bg="gray.900" color="blue.500" padding="20px" borderRadius="5px" w="100vw" maxW={"500px"}>
             <Link href={data.link}>
                 <Icon as={BiLinkExternal} fontSize="xl"/>
             </Link>
