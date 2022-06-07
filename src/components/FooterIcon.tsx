@@ -8,10 +8,8 @@ interface FooterIconProps{
 
 export function FooterIcon({icon, link}: FooterIconProps){
 
-    console.log(typeof icon)
-
     return(
-        <Link href={link}>
+        <Link href={link} _hover={{fontSize: "2rem"}}>
             <Icon as={icon}/>
         </Link>
     )
