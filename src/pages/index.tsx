@@ -6,12 +6,8 @@ import { Header } from "../components/Header";
 import { HeaderCarousel } from "../components/HeaderCarousel";
 import { InstagramCarousel } from "../components/InstagramCarousel";
 import { HourCard } from "../components/HourCard";
-import Link from "next/link";
 import { DocumentCard } from "../components/DocumentCard";
 import { FinancialCard } from "../components/FinancialCard";
-import {BsFacebook, BsYoutube} from 'react-icons/bs'
-import {AiFillInstagram} from 'react-icons/ai'
-import {IoLogoWhatsapp} from 'react-icons/io5'
 import { Footer } from "../components/Footer";
 
 export default function Home() {
@@ -205,7 +201,7 @@ export default function Home() {
         justify='flex-end'
         >
           <Box h="100%" w="100%" maxW='800px' bgGradient='linear(to-l, black, transparent)' position='absolute'></Box>
-          <Flex direction='column' align='flex-end' zIndex='10' justify='center' p='20px'>
+          <Flex direction='column' align='flex-end' zIndex='10' justify='center' p='40px'>
             <Text fontSize='2rem' color='blue.400' fontWeight='bold'>Nossa História</Text>
             <Text textAlign='justify' color='white' w='400px'>
               Os pastores Elias Gomes e Elisângela Kovalski, pastores fundadores da Fonte, são casados desde 1998 e tem dois filhos: Isabely de 22 anos, estudante de Odontologia e pastora de adolescentes e Elias Filho de 21 anos, estudante no CFNI – Christ For The Nations nos EUA.
@@ -222,7 +218,7 @@ export default function Home() {
         bgImageLink="/images/elias.jpg"
         >
           <Box h="100%" w="100%" maxW='800px' bgGradient='linear(to-r, black, transparent)' position='absolute' left='0'></Box>
-          <Flex direction='column' zIndex='10' justify='center' p='20px'>
+          <Flex direction='column' zIndex='10' justify='center' p='40px'>
             <Text fontSize='2rem' color='blue.400' fontWeight='bold'>Nossa Visão</Text>
             <Text textAlign='justify' color='white' w='400px'>
             Valorizamos as vidas que Deus confiou a nós, por isso nossa igreja é organizada em Redes pastorais, que são responsáveis pelo cuidado individual através do discipulado.
@@ -245,7 +241,7 @@ export default function Home() {
         {/* Hours */}
         <Section id="hours" h="100%" minH="90vh" w="100%" maxW="1500px" m="0 auto" direction="column" justify="center" align="center" px="20px">
           <Text fontSize="2xl" fontWeight="bold" color="blue.500" textAlign="center">Horários</Text>
-          <SimpleGrid columns={{sm: 1, lg: 3}} spacing={5} minH="300px">
+          <SimpleGrid columns={{base: 1, lg: 3}} spacing={5} minH="300px">
             {
               hours.map(hour => (
                 <HourCard hourData={hour}/>
@@ -257,7 +253,7 @@ export default function Home() {
         {/* Documents */}
         <Section id="documents" h="90vh" w="100%" maxW="1500px" m="0 auto" direction="column" justify="center" align="center">
           <Text fontSize="2xl" fontWeight="bold" color="blue.500" textAlign="center" mb="1rem">Documentos</Text>
-          <SimpleGrid columns={{sm: 1, lg: 4}} spacing={10}>
+          <SimpleGrid columns={{base: 1, lg: 4}} spacing={10}>
             {
               documents.map(document => (
                 <DocumentCard data={document}/>
@@ -269,7 +265,7 @@ export default function Home() {
         {/* Financial */}
         <Section id="financial" h="90vh" w="100%" maxW="1200px" m="0 auto" direction="column" justify="center" align="center" px="40px">
           <Text fontSize="2xl" fontWeight="bold" color="blue.500" textAlign="center" mb="1rem">Financeiro</Text>
-          <SimpleGrid columns={{sm: 1, lg: 3}} spacing={10} w="100%">
+          <SimpleGrid columns={{base: 1, lg: 3}} spacing={10} w="100%">
             {
               financial.map(data => (
                 <FinancialCard data={data} copy/>
@@ -280,7 +276,7 @@ export default function Home() {
         
         {/* Location */}
         <Section id="location" h="100%" minH="75vh" w="100%" maxW="1200px" m="0 auto" justify="center" align="center" p="40px">
-          <SimpleGrid spacing={10} columns={{sm: 1, lg: 2}}>
+          <SimpleGrid spacing={10} columns={{base: 1, lg: 2}}>
             <Img src="/images/map.png"/>
             <Flex color="white" justify="center" direction="column">
               <Text fontSize="2xl" fontWeight="bold" color="blue.500">Visite-nos</Text>

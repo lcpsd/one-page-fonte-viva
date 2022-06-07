@@ -60,7 +60,7 @@ export function HeaderCarousel(){
                                     h='100%'
                                     bgImage={image.link}
                                     bgPosition="center"
-                                    bgSize={{sm: "contain", lg: "cover"}}
+                                    bgSize={{base: "contain", lg: "cover"}}
                                     bgRepeat="no-repeat"
                                 ></Box>
                             </SwiperSlide>
