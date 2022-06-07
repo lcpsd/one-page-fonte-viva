@@ -251,7 +251,7 @@ export default function Home() {
         </Section>
         
         {/* Documents */}
-        <Section id="documents" h="90vh" w="100%" maxW="1500px" m="0 auto" direction="column" justify="center" align="center">
+        <Section id="documents" h="90vh" w="100%" maxW="1500px" m="0 auto" direction="column" justify="center" align="center" px="40px">
           <Text fontSize="2xl" fontWeight="bold" color="blue.500" textAlign="center" mb="1rem">Documentos</Text>
           <SimpleGrid columns={{base: 1, lg: 4}} spacing={10}>
             {
