@@ -70,7 +70,7 @@ export function Header(){
                 </Flex>
             </Flex>
 
-            <Flex position="absolute" right="1.5rem" top="1.5rem" onClick={() => setOpenMenu(!openMenu)} display={["block", null, "none"]}>
+            <Flex position="fixed" right="1.5rem" top="1.5rem" onClick={() => setOpenMenu(!openMenu)} display={["block", null, "none"]}>
                 <Icon as={!openMenu ? AiOutlineMenu : AiOutlineClose} color="white" fontSize="2rem" fontWeight="light"/>
             </Flex>
         </Box>
