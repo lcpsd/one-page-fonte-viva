@@ -243,9 +243,9 @@ export default function Home() {
         </Section>
 
         {/* Hours */}
-        <Section id="hours" h="90vh" w="100%" maxW="1500px" m="0 auto" direction="column" justify="center" align="center" px="20px">
+        <Section id="hours" h="100%" minH="90vh" w="100%" maxW="1500px" m="0 auto" direction="column" justify="center" align="center" px="20px">
           <Text fontSize="2xl" fontWeight="bold" color="blue.500" textAlign="center">Horários</Text>
-          <SimpleGrid columns={{sm: 1, lg: 3}} spacing={5} h="300px">
+          <SimpleGrid columns={{sm: 1, lg: 3}} spacing={5} minH="300px">
             {
               hours.map(hour => (
                 <HourCard hourData={hour}/>
