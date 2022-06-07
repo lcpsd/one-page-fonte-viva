@@ -1,4 +1,4 @@
-import { Flex, Img } from '@chakra-ui/react';
+import { Box, Flex, Img } from '@chakra-ui/react';
 import { A11y, Pagination } from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import styled from 'styled-components'
@@ -53,17 +53,16 @@ export function HeaderCarousel(){
                     {
                         slideImages.map(image => (
                             <SwiperSlide key={image.id}>
-                                <Img
+                                <Box
                                     padding="0"
-                                    src="/nobg.png"
                                     flex='1'
                                     w='100%'
                                     h='100%'
                                     bgImage={image.link}
                                     bgPosition="center"
-                                    bgSize="cover"
+                                    bgSize={{sm: "contain", lg: "cover"}}
                                     bgRepeat="no-repeat"
-                                  />
+                                ></Box>
                             </SwiperSlide>
                         ))
                     }
