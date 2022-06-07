@@ -29,7 +29,7 @@ export function VerticalCarousel({data, carouselTitle}: VerticalCarouselProps){
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
 
     return(
-        <CustomCarousel w="100%" maxW="1500px" h="100%" m="0 auto" position="relative">
+        <CustomCarousel w="100vw" maxW="1500px" h="100%" m="0 auto" position="relative">
             <Text
               position="absolute"
               left="0"
@@ -46,7 +46,14 @@ export function VerticalCarousel({data, carouselTitle}: VerticalCarouselProps){
             <Swiper
             modules={[Navigation, A11y]}
             navigation
-            slidesPerView={4}
+            breakpoints={{
+                640: {
+                    slidesPerView: 1,
+                  },
+                  1024: {
+                    slidesPerView: 4,
+                  },
+            }}
             onSlideChange={(slide) => setCurrentSlideIndex(slide.activeIndex)}
             >
                 {
