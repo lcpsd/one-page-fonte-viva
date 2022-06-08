@@ -6,6 +6,10 @@ import {Swiper, SwiperSlide} from 'swiper/react'
 import { VerticalCard } from './VerticalCard'
 
 const CustomCarousel = styled(Flex)`
+    .swiper-wrapper{
+        width: 100%;
+    }
+
     .swiper-button-next,
     .swiper-button-prev {
         color: white !important;
@@ -25,7 +29,7 @@ interface VerticalCarouselProps{
 }
 
 export function VerticalCarousel({data, carouselTitle}: VerticalCarouselProps){
-    
+
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
 
     return(

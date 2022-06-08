@@ -20,6 +20,7 @@ export function VerticalCard({title, description, image_link, currentIndex, slid
             align="center"
             color="white"
             direction="column"
+            w="100%"
             >
             <Box
                 bgGradient='linear(to-t, black, transparent)'

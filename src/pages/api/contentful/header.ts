@@ -11,7 +11,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
                 const entries = await cfClient.getEntries({
                     content_type: 'headerCarousel',
                 })
-
+                
                 const sanitizedEntries = entries.items.map((entry: any) => (
                     {
                         id: entry.sys.id,
