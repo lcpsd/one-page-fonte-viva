@@ -1,5 +1,5 @@
 import { Flex, Img, SimpleGrid, Text } from "@chakra-ui/react";
-import { Section } from "./current-section";
+import { Section } from "../current-section";
 
 export function LocationSection(){
     return(

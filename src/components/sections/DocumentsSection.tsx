@@ -1,6 +1,6 @@
 import { SimpleGrid, Text } from "@chakra-ui/react";
-import { Section } from "./current-section";
-import { DocumentCard } from "./DocumentCard";
+import { Section } from "../current-section";
+import { DocumentCard } from "../DocumentCard";
 
 export function DocumentsSection(){
 

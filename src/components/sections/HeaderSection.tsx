@@ -1,6 +1,6 @@
-import { Section } from "./current-section";
-import { HeaderCarousel } from "./HeaderCarousel";
-import { InstagramCarousel } from "./InstagramCarousel";
+import { Section } from "../current-section";
+import { HeaderCarousel } from "../HeaderCarousel";
+import { InstagramCarousel } from "../InstagramCarousel";
 
 export function HeaderSection(){
 

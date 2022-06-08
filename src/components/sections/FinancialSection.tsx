@@ -1,6 +1,6 @@
 import { SimpleGrid, Text } from "@chakra-ui/react";
-import { Section } from "./current-section";
-import { FinancialCard } from "./FinancialCard";
+import { Section } from "../current-section";
+import { FinancialCard } from "../FinancialCard";
 
 export function FinancialSection(){
 

@@ -1,17 +1,14 @@
-import { Flex, Img, SimpleGrid, Text } from "@chakra-ui/react";
-import { Section } from "../components/current-section";
+import { Flex } from "@chakra-ui/react";
 import { Header } from "../components/Header";
-import { DocumentCard } from "../components/DocumentCard";
-import { FinancialCard } from "../components/FinancialCard";
 import { Footer } from "../components/Footer";
-import { ActionsCarousel } from "../components/ActionsSection";
+import { ActionsCarousel } from "../components/sections/ActionsSection";
 import { PastorsCarousel } from "../components/PastorsCarousel";
-import { HoursSection } from "../components/HoursSection";
-import { VisionSection } from "../components/VisionSection";
-import { HistorySection } from "../components/HistorySection";
-import { HeaderSection } from "../components/HeaderSection";
-import { FinancialSection } from "../components/FinancialSection";
-import { LocationSection } from "../components/LocationSection";
+import { HoursSection } from "../components/sections/HoursSection";
+import { VisionSection } from "../components/sections/VisionSection";
+import { HistorySection } from "../components/sections/HistorySection";
+import { HeaderSection } from "../components/sections/HeaderSection";
+import { FinancialSection } from "../components/sections/FinancialSection";
+import { LocationSection } from "../components/sections/LocationSection";
 
 export default function Home() {
 

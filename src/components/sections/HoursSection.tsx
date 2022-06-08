@@ -1,6 +1,6 @@
 import { SimpleGrid, Text } from "@chakra-ui/react";
-import { Section } from "./current-section";
-import { HourCard } from "./HourCard";
+import { Section } from "../current-section";
+import { HourCard } from "../HourCard";
 
 export function HoursSection(){
 

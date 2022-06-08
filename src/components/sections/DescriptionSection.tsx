@@ -1,5 +1,5 @@
 import { ChakraProps, ChakraStyledOptions } from "@chakra-ui/react";
-import { Section } from "./current-section";
+import { Section } from "../current-section";
 
 interface DesriptionSectionProps extends ChakraStyledOptions{
     children: JSX.Element | JSX.Element[];

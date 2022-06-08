@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import api from "../services/axios";
-import { Section } from "./current-section";
-import { VerticalCarousel } from "./VerticalCarousel";
+import api from "../../services/axios";
+import { Section } from "../current-section";
+import { VerticalCarousel } from "../VerticalCarousel";
 
 interface EntryProps{
     id: string;
