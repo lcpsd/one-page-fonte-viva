@@ -9,7 +9,7 @@ export function VisionSection(){
         bgImageLink="/images/elias.jpg"
         >
           <Box h="100%" w="100%" maxW='800px' bgGradient='linear(to-r, black, transparent)' position='absolute' left='0'></Box>
-          <Flex direction='column' zIndex='10' justify='center' p='40px'>
+          <Flex direction='column' zIndex='10' justify='center' p='40px' textAlign={{base:"center", lg:"left"}}>
             <Text fontSize='2rem' color='blue.400' fontWeight='bold'>Nossa Visão</Text>
             <Text textAlign='justify' color='white' maxW='400px'>
             Valorizamos as vidas que Deus confiou a nós, por isso nossa igreja é organizada em Redes pastorais, que são responsáveis pelo cuidado individual através do discipulado.

@@ -49,7 +49,7 @@ export function HoursSection(){
           <SimpleGrid columns={{base: 1, lg: 3}} spacing={5} minH="300px">
             {
               hours.map(hour => (
-                <HourCard hourData={hour}/>
+                <HourCard hourData={hour} key={hour.id}/>
               ))
             }
           </SimpleGrid>

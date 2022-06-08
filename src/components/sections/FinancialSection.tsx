@@ -31,7 +31,7 @@ export function FinancialSection(){
           <SimpleGrid columns={{base: 1, lg: 3}} spacing={10} w="100%">
             {
               financial.map(data => (
-                <FinancialCard data={data} copy/>
+                <FinancialCard data={data} copy key={data.id}/>
               ))
             }
           </SimpleGrid>

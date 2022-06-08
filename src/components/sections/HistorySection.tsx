@@ -10,7 +10,7 @@ export function HistorySection(){
         >
           <Box h="100%" w="100%" maxW='800px' bgGradient='linear(to-l, black, transparent)' position='absolute'></Box>
           <Flex direction='column' align='flex-end' zIndex='10' justify='center' p='40px'>
-            <Text fontSize='2rem' color='blue.400' fontWeight='bold'>Nossa História</Text>
+            <Text fontSize='2rem' color='blue.400' fontWeight='bold' textAlign={{base:"center", lg:"right"}} w="100%">Nossa História</Text>
             <Text textAlign='justify' color='white' maxW='400px'>
               Os pastores Elias Gomes e Elisângela Kovalski, pastores fundadores da Fonte, são casados desde 1998 e tem dois filhos: Isabely de 22 anos, estudante de Odontologia e pastora de adolescentes e Elias Filho de 21 anos, estudante no CFNI – Christ For The Nations nos EUA.
               Iniciaram o ministério pastoral em 2002 na cidade de Guaratuba no estado do Paraná, local onde aprenderam a depender de Deus e a cuidar de pessoas.

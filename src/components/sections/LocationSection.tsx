@@ -7,8 +7,8 @@ export function LocationSection(){
           <SimpleGrid spacing={10} columns={{base: 1, lg: 2}}>
             <Img src="/images/map.png"/>
             <Flex color="white" justify="center" direction="column">
-              <Text fontSize="2xl" fontWeight="bold" color="blue.500">Visite-nos</Text>
-              <Text>
+              <Text fontSize="2xl" fontWeight="bold" color="blue.500" textAlign={{base:"center", lg: "left"}}>Visite-nos</Text>
+              <Text textAlign={{base:"center", lg: "left"}}>
               Rua: Avenida Mascarenhas de Moraes, 6854 <br/>
               Bairro: São Francisco<br/>
               Cidade: Campo Grande - MS
