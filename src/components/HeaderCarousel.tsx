@@ -2,6 +2,8 @@ import { Box, Flex, Img } from '@chakra-ui/react';
 import { A11y, Pagination } from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import styled from 'styled-components'
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 const CustomCarousel = styled.span`
     width: 100%;
@@ -22,26 +24,25 @@ const CustomCarousel = styled.span`
     }
 `
 
+interface EntryProps{
+    id: string;
+    type: string;
+    createAt: string;
+    image_link: string;   
+}
+
 export function HeaderCarousel(){
 
-    const slideImages = [
-        {
-            id: 1,
-            link: 'https://random.imagecdn.app/1120/550'
-        },
-        {
-            id: 2,
-            link: 'https://random.imagecdn.app/1120/550'
-        },
-        {
-            id: 3,
-            link: 'https://random.imagecdn.app/1120/550'
-        },
-        {
-            id: 4,
-            link: 'https://random.imagecdn.app/1120/550'
-        }
-    ]
+    const[entries, setEntries] = useState([])
+
+    async function fetchHeaderData(){
+        const {data} = await axios.get<EntryProps[]>("/api/contentful/header")
+        setEntries(data)
+    }
+
+    useEffect(() => {
+        fetchHeaderData()
+    }, [])
 
     return(
         <Flex w={'100vw'} h={{base: "350px", lg: '500px'}} maxW='1500px' m='0 auto' className='carousel'>
@@ -51,14 +52,14 @@ export function HeaderCarousel(){
                 pagination={{ clickable: true }}
                 >
                     {
-                        slideImages.map(image => (
-                            <SwiperSlide key={image.id}>
+                        entries.map((entry: EntryProps) => (
+                            <SwiperSlide key={entry.id}>
                                 <Box
                                     padding="0"
                                     flex='1'
                                     w='100%'
                                     h='100%'
-                                    bgImage={image.link}
+                                    bgImage={entry.image_link}
                                     bgPosition="center"
                                     bgSize={{base: "contain", lg: "cover"}}
                                     bgRepeat="no-repeat"
