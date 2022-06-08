@@ -10,6 +10,7 @@ import { DocumentCard } from "../components/DocumentCard";
 import { FinancialCard } from "../components/FinancialCard";
 import { Footer } from "../components/Footer";
 import { ActionsCarousel } from "../components/ActionsCarousel";
+import { PastorsCarousel } from "../components/PastorsCarousel";
 
 export default function Home() {
 
@@ -186,10 +187,7 @@ export default function Home() {
 
         <ActionsCarousel />
         
-        {/* Pastors */}
-        <Section id="pastors">
-          <VerticalCarousel data={pastors} carouselTitle="Redes Pastorais"/>
-        </Section>
+        <PastorsCarousel />
 
         {/* Hours */}
         <Section id="hours" h="100%" minH="90vh" w="100%" maxW="1500px" m="0 auto" direction="column" justify="center" align="center" px="20px">

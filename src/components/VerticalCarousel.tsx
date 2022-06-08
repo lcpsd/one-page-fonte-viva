@@ -6,6 +6,11 @@ import {Swiper, SwiperSlide} from 'swiper/react'
 import { VerticalCard } from './VerticalCard'
 
 const CustomCarousel = styled(Flex)`
+
+    .swiper{
+        width: 100%;
+    }
+
     .swiper-wrapper{
         width: 100%;
     }
