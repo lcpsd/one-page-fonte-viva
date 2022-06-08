@@ -25,7 +25,7 @@ interface VerticalCarouselProps{
 }
 
 export function VerticalCarousel({data, carouselTitle}: VerticalCarouselProps){
-
+    
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
 
     return(

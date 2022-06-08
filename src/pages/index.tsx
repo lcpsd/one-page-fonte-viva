@@ -9,53 +9,9 @@ import { HourCard } from "../components/HourCard";
 import { DocumentCard } from "../components/DocumentCard";
 import { FinancialCard } from "../components/FinancialCard";
 import { Footer } from "../components/Footer";
+import { ActionsCarousel } from "../components/ActionsCarousel";
 
 export default function Home() {
-
-  const actions = [
-      {
-          id: 1,
-          title:"Adoradores",
-          description: "Nostrum veritatis earum voluptates non commodi ea provident sunt velit sint, facere suscipit doloremque dolorum est saepe!",
-          image_link: "https://random.imagecdn.app/1280/720"
-      },
-      {
-          id: 2,
-          title:"Boas Vindas",
-          description: "Nostrum veritatis earum voluptates non commodi ea provident sunt velit sint, facere suscipit doloremque dolorum est saepe!",
-          image_link: "https://random.imagecdn.app/1280/720"
-      },
-      {
-          id: 3,
-          title:"Crescei",
-          description: "Nostrum veritatis earum voluptates non commodi ea provident sunt velit sint, facere suscipit doloremque dolorum est saepe!",
-          image_link: "https://random.imagecdn.app/1280/720"
-      },
-      {
-          id: 4,
-          title:"Kids",
-          description: "Nostrum veritatis earum voluptates non commodi ea provident sunt velit sint, facere suscipit doloremque dolorum est saepe!",
-          image_link: "https://random.imagecdn.app/1280/720"
-      },
-      {
-          id: 5,
-          title:"AtmoArt",
-          description: "Nostrum veritatis earum voluptates non commodi ea provident sunt velit sint, facere suscipit doloremque dolorum est saepe!",
-          image_link: "https://random.imagecdn.app/1280/720"
-      },
-      {
-          id: 6,
-          title:"Maná",
-          description: "Nostrum veritatis earum voluptates non commodi ea provident sunt velit sint, facere suscipit doloremque dolorum est saepe!",
-          image_link: "https://random.imagecdn.app/1280/720"
-      },
-      {
-          id: 7,
-          title:"Mudança",
-          description: "Nostrum veritatis earum voluptates non commodi ea provident sunt velit sint, facere suscipit doloremque dolorum est saepe!",
-          image_link: "https://random.imagecdn.app/1280/720"
-      }
-  ]
 
   const pastors = [
     {
@@ -228,10 +184,7 @@ export default function Home() {
           </Flex>
         </DescriptionSection>
 
-        {/* Actions */}
-        <Section id="actions">
-          <VerticalCarousel data={actions} carouselTitle="Ações"/>
-        </Section>
+        <ActionsCarousel />
         
         {/* Pastors */}
         <Section id="pastors">

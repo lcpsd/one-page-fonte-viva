@@ -9,7 +9,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         case 'GET':
             try {
                 const entries = await cfClient.getEntries({
-                    content_type: 'headerCarousel',
+                    content_type: 'actions',
                 })
 
                 const sanitizedEntries = entries.items.map((entry: any) => (
@@ -17,7 +17,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
                         id: entry.sys.id,
                         type: entry.sys.type,
                         createAt: entry.sys.createdAt,
-                        image_link: entry.fields.image.fields.file.url
+                        image_link: entry.fields.image.fields.file.url,
+                        title: entry.fields.title,
+                        description: entry.fields.description,
                     }
                 ))
 
