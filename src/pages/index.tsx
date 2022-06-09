@@ -18,7 +18,11 @@ export default function Home() {
   return (
     <>
       <Header />
-      <FloatButton icon={RiWhatsappFill} text="Fale Conosco" visibleHeight={1000} hideOffset={300}/>
+      <FloatButton
+        icon={RiWhatsappFill}
+        text="Fale Conosco"
+        visibleHeight={1000}
+        hideOffset={300} />
       <Flex direction='column' align='center'>
         <HeaderSection />
 
