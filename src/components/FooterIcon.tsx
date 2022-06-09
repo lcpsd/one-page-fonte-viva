@@ -1,15 +1,15 @@
-import { Icon, Link } from "@chakra-ui/react";
+import { ChakraProps, Icon, Link } from "@chakra-ui/react";
 import { IconType } from "react-icons";
 
-interface FooterIconProps{
+interface FooterIconProps extends ChakraProps{
     icon: IconType;
-    link: string;
+    link?: string;
 }
 
-export function FooterIcon({icon, link}: FooterIconProps){
+export function FooterIcon({icon, link, ...rest}: FooterIconProps){
 
     return(
-        <Link href={link} _hover={{fontSize: "2rem"}}>
+        <Link href={link} {...rest} isExternal>
             <Icon as={icon}/>
         </Link>
     )
