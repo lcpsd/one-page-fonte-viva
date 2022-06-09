@@ -45,8 +45,8 @@ export function HoursSection(){
 
     return(
         <Section id="hours" h="100%" minH="90vh" w="100%" maxW="1500px" m="0 auto" direction="column" justify="center" align="center" px="20px">
-          <Text fontSize="2xl" fontWeight="bold" color="blue.500" textAlign="center">Horários</Text>
-          <SimpleGrid columns={{base: 1, lg: 3}} spacing={5} minH="300px">
+          <Text fontSize="2xl" fontWeight="bold" color="blue.500" textAlign="center" mb="2rem">Horários</Text>
+          <SimpleGrid columns={{base: 2, '2xl': 3}} spacing={5} minH="300px">
             {
               hours.map(hour => (
                 <HourCard hourData={hour} key={hour.id}/>

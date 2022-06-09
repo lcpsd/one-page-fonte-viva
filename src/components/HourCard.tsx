@@ -10,13 +10,13 @@ export function HourCard({hourData}){
                 </Text>
                 </Flex>
                 <Flex direction="column" color="white">
-                <Text fontSize="md" fontWeight="bold">
-                    {hourData.title}
-                </Text>
-                <Text fontSize="sm" w="100%" maxW={{base:"250px",lg:"350px"}}>
-                    {hourData.description}
-                </Text>
-            </Flex>
+                    <Text fontSize="md" fontWeight="bold">
+                        {hourData.title}
+                    </Text>
+                    <Text fontSize="sm" w={{base:"250px",lg:"350px"}}>
+                        {hourData.description}
+                    </Text>
+                </Flex>
         </HStack>
     )
 }
