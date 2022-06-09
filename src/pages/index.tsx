@@ -22,10 +22,10 @@ export default function Home() {
 
         <VisionSection />
 
+        <PastorsCarousel />
+  
         <ActionsCarousel />
         
-        <PastorsCarousel />
-
         <HoursSection />
     
         <FinancialSection />
