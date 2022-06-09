@@ -16,10 +16,10 @@ export function Footer(){
             maxW="1500px" 
             p="10px"
             mx="auto" 
-            direction={{base: "column", lg: "row"}} 
-            gap={{base: "40px", lg: "0px"}}>
-                <Text flex="3" textAlign="center" order={{base: "4", lg: "0"}}>13.425.720/0001-40 | Igreja Evangelica Fonte Viva</Text>
-                <Img src="/logo.png" h="100px" w="100px" mx="8rem"/>
+            direction={{base: "column", '2xl': "row"}} 
+            gap={{base: "40px", '2xl': "0px"}}>
+                <Text flex="3" textAlign="center" order={{base: "4", '2xl': "0"}}>13.425.720/0001-40 | Igreja Evangelica Fonte Viva</Text>
+                <Img src="/logo.png" h="100px" w="100px" mx={{xl: "8rem"}}/>
                 <SimpleGrid columns={{base: 2, lg: 7}} spacing={{base: 100, lg: 10}} flex="3" fontSize="2rem" >
 
                     <FooterIcon icon={BsYoutube} link="https://www.youtube.com/c/IgrejaFonteViva"/>
