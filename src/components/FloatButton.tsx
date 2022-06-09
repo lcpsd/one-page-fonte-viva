@@ -22,9 +22,9 @@ export function FloatButton({icon, text, visibleHeight, hideOffset}:FloatButtonP
 
     useEffect(() => {
         window.onscroll = () => {
-            console.log(visibleHeight, window.scrollY)
             window.scrollY > visibleHeight && setShowBox(true)
-            window.scrollY < visibleHeight || window.scrollY > ((document.body.offsetHeight - 1000)- hideOffset) && setShowBox(false)
+            window.scrollY < visibleHeight && setShowBox(false)
+            window.scrollY <= visibleHeight || window.scrollY > ((document.body.offsetHeight - 1000)- hideOffset) && setShowBox(false)
         }
     }, [])
 
