@@ -10,8 +10,9 @@ import { HeaderSection } from "../components/sections/HeaderSection";
 import { FinancialSection } from "../components/sections/FinancialSection";
 import { LocationSection } from "../components/sections/LocationSection";
 import { RiWhatsappFill } from "react-icons/ri";
-import { FooterIcon } from "../components/FooterIcon";
 import { FloatButton } from "../components/FloatButton";
+
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
 
