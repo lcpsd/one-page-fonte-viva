@@ -65,14 +65,14 @@ export function Header(){
                         <Link>Visão</Link>
                     </ActiveLink>
 
-                    <ActiveLink href="#actions">
-                        <Link>Ações</Link>
-                    </ActiveLink>
-
                     <ActiveLink href="#pastors">
                         <Link>Pastores</Link>
                     </ActiveLink>
 
+                    <ActiveLink href="#actions">
+                        <Link>Ações</Link>
+                    </ActiveLink>
+                    
                     <ActiveLink href="#hours">
                         <Link>Horários</Link>
                     </ActiveLink>

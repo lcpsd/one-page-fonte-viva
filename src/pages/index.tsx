@@ -13,6 +13,7 @@ import { RiWhatsappFill } from "react-icons/ri";
 import { FloatButton } from "../components/FloatButton";
 
 import 'react-toastify/dist/ReactToastify.css';
+import { DocumentsSection } from "../components/sections/DocumentsSection";
 
 export default function Home() {
 
@@ -36,6 +37,8 @@ export default function Home() {
         <ActionsCarousel />
         
         <HoursSection />
+
+        <DocumentsSection />
     
         <FinancialSection />
 

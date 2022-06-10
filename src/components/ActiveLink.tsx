@@ -1,5 +1,5 @@
 import Link, { LinkProps } from "next/link";
-import { cloneElement, ReactElement, ReactNode, useState } from "react";
+import { cloneElement, ReactElement, ReactNode, useEffect, useState } from "react";
 import { useMenuContext } from "../contexts/MenuContext";
 import { theme } from "../styles/theme";
 import { useCurrentSectionContext } from "./current-section/Context";
@@ -11,13 +11,15 @@ interface ActiveLinksProps extends LinkProps{
 export function ActiveLink({children, href, ...rest}: ActiveLinksProps){
 
     const {currentSection} = useCurrentSectionContext()
+    const [isActive, setIsActive] = useState(false)
     const {setOpenMenu} = useMenuContext()
-
-    let isActive = false
 
     const linkHref = String(href).split("#")[1]
 
-    if(linkHref === currentSection) isActive = true
+    useEffect(() => {
+        linkHref === currentSection && setIsActive(true)
+        linkHref !== currentSection && setIsActive(false)
+    }, [currentSection])
 
     return(
         <Link {...rest} href={href}>

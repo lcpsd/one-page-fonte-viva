@@ -1,5 +1,5 @@
 import { Flex, FlexProps } from '@chakra-ui/react'
-import { ReactNode } from 'react'
+import { ReactNode, useEffect } from 'react'
 import {useCurrentSectionContext} from './Context'
 
 interface SectionProps extends FlexProps{
@@ -14,13 +14,14 @@ export function CurrentSection(){
     
     const {currentSection, setCurrentSection} = useCurrentSectionContext()
 
-    if(typeof window !== 'undefined'){
+    
+    useEffect(() => {
         const allSections: NodeListOf<HTMLElement> = document.querySelectorAll('.current-section-node')
-
+        
         window.onscroll = () => {
-    
+            
             allSections.forEach(section => {
-    
+                
                 const sectionOffsetTop = section.offsetTop
                 const sectionOffsetBottom = sectionOffsetTop + section.offsetHeight
                 const windowOffsetTop = window.scrollY + 200
@@ -28,9 +29,9 @@ export function CurrentSection(){
                 if(sectionOffsetBottom >= windowOffsetTop && sectionOffsetTop <= windowOffsetTop){
                     currentSection !== section.id && section.id && setCurrentSection(section.id)
                 }   
-            })        
+            })
         }
-    }
+    }, [])
 
     return(<></>)
 }
