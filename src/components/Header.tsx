@@ -2,10 +2,16 @@ import {Box, Flex, Icon, Img, Link} from '@chakra-ui/react'
 import { ActiveLink } from './ActiveLink'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import { useMenuContext } from '../contexts/MenuContext'
+import { useEffect, useState } from 'react'
 
 export function Header(){
 
     const {openMenu, setOpenMenu} = useMenuContext()
+    const [innerHeight, setInnerheight] = useState("0px")
+
+    useEffect(() => {
+        setInnerheight(`${window.innerHeight}px`)
+    }, [])
 
     return(
         <Box bg='black' w="100vw" borderBottom="1px" borderBottomColor="gray.900" position={{ base:"absolute", lg:"sticky" }} style={{
@@ -18,7 +24,7 @@ export function Header(){
                 maxW="1120px"
                 w={{base:"100%", lg:"initial"}}
                 m="0 auto"
-                h={{base:"100vh", lg:"120px"}}
+                h={{base: innerHeight, lg:"120px"}}
                 align="center"
                 justify={{base:"center", lg:"space-between"}}
                 p="20px"
