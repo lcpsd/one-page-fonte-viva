@@ -1,5 +1,6 @@
 import Link, { LinkProps } from "next/link";
 import { cloneElement, ReactElement, ReactNode, useEffect, useState } from "react";
+import styled from "styled-components";
 import { useMenuContext } from "../contexts/MenuContext";
 import { theme } from "../styles/theme";
 import { useCurrentSectionContext } from "./current-section/Context";
@@ -7,6 +8,33 @@ import { useCurrentSectionContext } from "./current-section/Context";
 interface ActiveLinksProps extends LinkProps{
     children: ReactElement;
 }
+
+interface CustomLinkProps{
+    isActive: boolean;
+}
+
+const CustomLink = styled.span<CustomLinkProps>`
+    .menuLink{
+
+        color: ${(props) => props.isActive && theme.colors.blue['500']};
+
+        position: relative;
+
+        ::after{
+            transition: width ease-in 0.2s;
+
+            content: '';
+            width: ${(props) => props.isActive ? "140%" : "0%"};
+            height: 1px;
+    
+            position: absolute;
+            left: -20%;
+            bottom: -10px;
+
+            background: ${theme.colors.blue['500']};
+        }
+    }
+`
 
 export function ActiveLink({children, href, ...rest}: ActiveLinksProps){
 
@@ -22,21 +50,14 @@ export function ActiveLink({children, href, ...rest}: ActiveLinksProps){
     }, [currentSection])
 
     return(
-        <Link {...rest} href={href}>
-            {cloneElement(children, {
-                onClick: () => setOpenMenu(false),
-                className: "menuLink",
-                style:{
-                    color: isActive ? theme.colors.blue['500'] : theme.colors.gray['300'],
-                    borderBottom: isActive ? `2px solid ${theme.colors.blue['500']}` : '',
-                },
-                _hover:{
-                    color: 'blue.300',
-                    borderBottom: '1px',
-                    borderColor: 'blue.300'
-                },
-            })
-            }
-        </Link>
+        <CustomLink isActive={isActive}>
+            <Link {...rest} href={href}>
+                {cloneElement(children, {
+                    onClick: () => setOpenMenu(false),
+                    className: "menuLink"
+                })
+                }
+            </Link>
+        </CustomLink>
     )
 }
