@@ -3,6 +3,8 @@ import { A11y, Navigation, Pagination, Scrollbar } from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
 import styled from 'styled-components'
 import { stringShortner } from "../utils/stringShortner";
+import axios from "axios";
+import { useEffect } from "react";
 
 const CustomCarousel = styled(Flex)`
     

@@ -24,7 +24,7 @@ export function Header(){
                 maxW="1120px"
                 w={{base:"100%", lg:"initial"}}
                 m="0 auto"
-                h={{base: innerHeight, lg:"120px"}}
+                h={{base: "100vh", lg:"120px"}}
                 align="center"
                 justify={{base:"center", lg:"space-between"}}
                 p="20px"
