@@ -33,7 +33,7 @@ export function ActionsCarousel(){
             <SimpleGrid columns={{base: 2, lg: 4}} spacing="40px" w={{base: "300px", lg: "100%"}} m="0 auto" maxW="800px">
                 {
                     entries.map(entry => (
-                        <Flex direction="column" align="center" color="white">
+                        <Flex direction="column" align="center" color="white" key={entry.id}>
                             <Menu>
                                 <MenuButton>
                                     <Flex borderRadius="100%" bg="white" align="center" justify="center" w="100px" h="100px">

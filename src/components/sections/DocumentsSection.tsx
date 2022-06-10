@@ -33,7 +33,7 @@ export function DocumentsSection(){
           <SimpleGrid columns={{base: 1, lg: 4}} spacing={10}>
             {
               documents.map(document => (
-                <DocumentCard data={document}/>
+                <DocumentCard data={document} key={document.id}/>
               ))
             }
           </SimpleGrid>
