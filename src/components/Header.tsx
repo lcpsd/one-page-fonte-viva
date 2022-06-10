@@ -11,8 +11,8 @@ export function Header(){
     const isLarge = useIsLarge()
 
     const variants = isLarge ? {
-        visible:{opacity: 1, zIndex: 10, transition: {ease: "easeIn", duration: 0.3}},
-        hidden: {opacity: 0, left: "-100rem", transition: {ease: "easeOut", duration: 0.3}}
+        visible:{opacity: 1, left: "0rem", zIndex: 10, transition: {ease: "easeIn", duration: 0.3}},
+        hidden: {opacity: 0, left: "-30rem", transition: {ease: "easeOut", duration: 0.3}}
     } : {
         visible:{opacity: 1},
         hidden: {opacity: 1},
