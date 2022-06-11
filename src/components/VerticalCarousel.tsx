@@ -38,7 +38,7 @@ export function VerticalCarousel({data, carouselTitle}: VerticalCarouselProps){
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
 
     return(
-        <CustomCarousel w="100vw" maxW="1500px" h={{base: "100vh", lg:"100%"}} m="0 auto" position="relative">
+        <CustomCarousel w="100%" maxW="1500px" h={{base: "100vh", lg:"100%"}} m="0 auto" position="relative">
             <Text
               position="absolute"
               left="0"

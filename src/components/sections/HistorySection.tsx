@@ -4,7 +4,7 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 export function HistorySection(){
     return(
         <DescriptionSection
-        bgImageLink="/images/fachada-igreja.png"
+        bgImageLink="/images/igreja.jpg"
         id='history'
         justify='flex-end'
         >

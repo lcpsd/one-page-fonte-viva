@@ -26,7 +26,7 @@ export function PastorsCarousel(){
 
     return(
         entries &&
-        <Section id="pastors">
+        <Section id="pastors" w="100%" maxW="1500px" m="0 auto">
           <VerticalCarousel data={entries} carouselTitle="Pastores"/>
         </Section>
     )

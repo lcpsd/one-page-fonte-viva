@@ -6,7 +6,7 @@ export function HeaderSection(){
 
     return(
         <Section direction='column' id='home'>
-          <HeaderCarousel />
+          {/* <HeaderCarousel /> */}
           <InstagramCarousel />
         </Section>
     )

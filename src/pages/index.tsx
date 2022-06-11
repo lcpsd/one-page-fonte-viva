@@ -25,7 +25,7 @@ export default function Home() {
         text="Fale Conosco"
         visibleHeight={1000}
         hideOffset={300} />
-      <Flex direction='column'>
+      <Flex direction='column' maxW="1500px" m="0 auto">
         <HeaderSection />
 
         <HistorySection />
