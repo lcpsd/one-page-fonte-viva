@@ -20,12 +20,17 @@ export function FloatButton({icon, text, visibleHeight, hideOffset}:FloatButtonP
         hidden: {opacity: 0, right: "-20rem"},
     }
 
+    function onScroll(){
+        window.scrollY > visibleHeight && setShowBox(true)
+        window.scrollY < visibleHeight && setShowBox(false)
+        window.scrollY <= visibleHeight || window.scrollY > ((document.body.offsetHeight - 1000)- hideOffset) && setShowBox(false)
+    }
+
     useEffect(() => {
-        window.onscroll = () => {
-            window.scrollY > visibleHeight && setShowBox(true)
-            window.scrollY < visibleHeight && setShowBox(false)
-            window.scrollY <= visibleHeight || window.scrollY > ((document.body.offsetHeight - 1000)- hideOffset) && setShowBox(false)
-        }
+        window.removeEventListener('scroll', onScroll);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        
+        return () => window.removeEventListener('scroll', onScroll);
     }, [])
 
     return(
