@@ -30,7 +30,7 @@ export function DocumentsSection(){
     return(
         <Section id="documents" h="90vh" w="100%" maxW="1500px" m="0 auto" direction="column" justify="center" align="center" px="40px">
           <Text fontSize="2xl" fontWeight="bold" color="blue.500" textAlign="center" mb="1rem">Documentos</Text>
-          <SimpleGrid columns={{base: 1, lg: 4}} spacing={10}>
+          <SimpleGrid columns={{base: 1, xl: 2, '2xl':4}} spacing={10}>
             {
               documents.map(document => (
                 <DocumentCard data={document} key={document.id}/>

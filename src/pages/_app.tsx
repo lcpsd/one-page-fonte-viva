@@ -9,7 +9,7 @@ import { CurrentSection } from "../components/current-section";
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
-import '../styles/fonts.css'
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return(
