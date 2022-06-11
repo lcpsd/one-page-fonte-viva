@@ -21,7 +21,6 @@ export function Header(){
     return(
         <Box
         bg='black' 
-        w="100vw" 
         borderBottom="1px" 
         borderBottomColor="gray.900" 
         position={{ base:"absolute", lg:"sticky" }} style={{
@@ -101,7 +100,7 @@ export function Header(){
               top="0"
               p="10px"
               align="center"
-              justify={!openMenu ? "space-between": "right"}
+              justify={!openMenu ? "space-between": "flex-end"}
               zIndex={10}
               >
                 <Img src="/logo.png" h="50px" opacity={0.3} display={!openMenu ? "block": "none"}/>
