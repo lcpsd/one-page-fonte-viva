@@ -1,8 +1,8 @@
-import { Flex, Img, Text } from "@chakra-ui/react"
-import { A11y, Navigation } from "swiper"
-import {Swiper, SwiperSlide} from "swiper/react"
+import { Flex, Img, Text } from "@chakra-ui/react";
+import { A11y, Navigation, Pagination, Scrollbar } from "swiper";
+import {Swiper, SwiperSlide} from "swiper/react";
 import styled from 'styled-components'
-import { stringShortner } from "../utils/stringShortner"
+import { stringShortner } from "../utils/stringShortner";
 
 const CustomCarousel = styled(Flex)`
     
@@ -69,7 +69,7 @@ export function InstagramCarousel(){
     ]
 
     return(
-        <Flex w={['100vw']} maxW="1500px" m="0 auto" mb="10px" h="320px">
+        <Flex w="100%" maxW="1500px" m="0 auto" mb="10px" h="100%">
             <CustomCarousel py="10px" w="100%" h="100%" m="0 auto">
                 <Swiper
                 modules={[Navigation, A11y]}
@@ -83,14 +83,17 @@ export function InstagramCarousel(){
                         slidesPerView: 2,
                       },
                       1024: {
-                        slidesPerView: 5,
+                        slidesPerView: 3,
+                      },
+                      1200: {
+                        slidesPerView: 4,
                       },
                 }}
                 >
                     {
                         posts.map(post => (
                             <SwiperSlide key={post.id}>
-                                <Img src={post.img_link} h="100%" w="auto"/>
+                                <Img src={post.img_link} h="auto" w="100%" m="0 auto"/>
                                 <Text
                                     w="100%"
                                     h="100px"
