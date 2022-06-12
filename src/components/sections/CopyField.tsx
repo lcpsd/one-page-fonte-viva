@@ -15,7 +15,6 @@ export function CopyField({text, left, right, ...rest}: CopyFieldProps){
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
-            closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
@@ -43,8 +42,11 @@ export function CopyField({text, left, right, ...rest}: CopyFieldProps){
         transition="all ease-in-out 0.2s"
         {...rest}
         >
-            <ToastContainer
-            position="top-right"
+            <Flex
+            as={ToastContainer}
+            position="fixed"
+            top={{base:"5rem",lg:"10rem"}}
+            right="-8rem"
             autoClose={5000}
             hideProgressBar={false}
             newestOnTop={false}

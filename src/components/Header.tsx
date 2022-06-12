@@ -3,7 +3,7 @@ import { ActiveLink } from './ActiveLink'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import { useMenuContext } from '../contexts/MenuContext'
 import { motion } from 'framer-motion'
-import { useIsSmall, useIsLarge } from '../hooks/useMediaQuery'
+import { useIsLarge } from '../hooks/useMediaQuery'
 
 export function Header(){
 
@@ -23,7 +23,8 @@ export function Header(){
         bg='black' 
         borderBottom="1px" 
         borderBottomColor="gray.900" 
-        position={{ base:"absolute", lg:"sticky" }} style={{
+        position={{ base:"absolute", lg:"sticky" }} 
+        style={{
             top: 0,
             left: 0,
             zIndex: 30
