@@ -1,8 +1,8 @@
-import { Flex, FlexProps } from '@chakra-ui/react'
+import { ChakraStyledOptions, Flex, FlexProps } from '@chakra-ui/react'
 import { ReactNode, useEffect } from 'react'
 import {useCurrentSectionContext} from './Context'
 
-interface SectionProps extends FlexProps{
+interface SectionProps extends ChakraStyledOptions{
     children:
     | ReactNode
     | JSX.Element[]
