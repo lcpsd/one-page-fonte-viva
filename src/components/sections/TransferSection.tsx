@@ -7,7 +7,7 @@ export function TransferSection(){
 
     return(
         <Section
-          id="financial"
+          id="transfer"
           h="140vh"
           w="100%"
           maxW="1200px"

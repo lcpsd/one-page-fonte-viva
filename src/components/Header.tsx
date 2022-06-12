@@ -76,12 +76,8 @@ export function Header(){
                         <Link>Horários</Link>
                     </ActiveLink>
 
-                    <ActiveLink href="#documents">
-                        <Link>Documentos</Link>
-                    </ActiveLink>
-
-                    <ActiveLink href="#financial">
-                        <Link>Financeiro</Link>
+                    <ActiveLink href="#transfer">
+                        <Link>Transferências</Link>
                     </ActiveLink>
 
                     <ActiveLink href="#location">
