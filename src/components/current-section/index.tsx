@@ -1,8 +1,9 @@
-import { ChakraStyledOptions, Flex, FlexProps } from '@chakra-ui/react'
-import { ReactNode, useEffect } from 'react'
+import { Flex, FlexProps } from '@chakra-ui/react'
+import { motion } from 'framer-motion';
+import { ReactNode, useEffect, useState } from 'react'
 import {useCurrentSectionContext} from './Context'
 
-interface SectionProps extends ChakraStyledOptions{
+interface SectionProps extends FlexProps{
     children:
     | ReactNode
     | JSX.Element[]
@@ -37,8 +38,23 @@ export function CurrentSection(){
 }
 
 export function Section({children, id, ...rest}: SectionProps){
+
+    const [isCurrent, setIsCurrent] = useState<boolean>()
+
+    const {currentSection} = useCurrentSectionContext()
+    
+    useEffect(() => {
+        currentSection === id ? setIsCurrent(true) : setIsCurrent(false)
+    }, [currentSection])
+
     return(
-        <Flex id={id} {...rest} className='current-section-node'>
+        <Flex
+          transition="opacity ease-in-out 1s"
+          opacity={isCurrent ? 1 : 0}
+          id={id}
+          className='current-section-node'
+          {...rest}
+          >
             {children}
         </Flex>
     )
