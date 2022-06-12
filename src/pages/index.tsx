@@ -7,7 +7,7 @@ import { HoursSection } from "../components/sections/HoursSection";
 import { VisionSection } from "../components/sections/VisionSection";
 import { HistorySection } from "../components/sections/HistorySection";
 import { HeaderSection } from "../components/sections/HeaderSection";
-import { FinancialSection } from "../components/sections/FinancialSection";
+import { TransferSection } from "../components/sections/TransferSection";
 import { LocationSection } from "../components/sections/LocationSection";
 import { RiWhatsappFill } from "react-icons/ri";
 import { FloatButton } from "../components/FloatButton";
@@ -40,7 +40,7 @@ export default function Home() {
 
         {/* <DocumentsSection /> */}
     
-        <FinancialSection />
+        <TransferSection />
 
         <LocationSection />      
         
