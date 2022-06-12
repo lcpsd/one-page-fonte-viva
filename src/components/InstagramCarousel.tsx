@@ -1,8 +1,10 @@
 import { Flex, Img, Text } from "@chakra-ui/react";
-import { A11y, Navigation, Pagination, Scrollbar } from "swiper";
+import { A11y, Navigation,} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
 import styled from 'styled-components'
 import { stringShortner } from "../utils/stringShortner";
+import axios from "axios";
+import { GetServerSideProps } from "next";
 
 const CustomCarousel = styled(Flex)`
     
@@ -18,55 +20,7 @@ const CustomCarousel = styled(Flex)`
     }
 `
 
-export function InstagramCarousel(){
-
-    const posts = [
-        {
-            id: 1,
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dui turpis, ultricies nec ante eu, hendrerit ultricies tortor. In nec vestibulum felis, eget eleifend augue. Sed rutrum vitae dolor a tincidunt. Etiam consectetur mi lorem, ac suscipit augue ultricies id. Cras ornare vitae sapien eu venenatis. Morbi eu felis maximus, pulvinar urna vitae, placerat sapien. Etiam ut elit convallis, dictum dolor quis, placerat ligula. Vestibulum rutrum ultrices ante, a sagittis eros sollicitudin ut.",
-            img_link: "https://random.imagecdn.app/1080/1080"
-        },
-        {
-            id: 2,
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dui turpis, ultricies nec ante eu, hendrerit ultricies tortor. In nec vestibulum felis, eget eleifend augue. Sed rutrum vitae dolor a tincidunt. Etiam consectetur mi lorem, ac suscipit augue ultricies id. Cras ornare vitae sapien eu venenatis. Morbi eu felis maximus, pulvinar urna vitae, placerat sapien. Etiam ut elit convallis, dictum dolor quis, placerat ligula. Vestibulum rutrum ultrices ante, a sagittis eros sollicitudin ut.",
-            img_link: "https://random.imagecdn.app/1080/1080"
-        },
-        {
-            id: 3,
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dui turpis, ultricies nec ante eu, hendrerit ultricies tortor. In nec vestibulum felis, eget eleifend augue. Sed rutrum vitae dolor a tincidunt. Etiam consectetur mi lorem, ac suscipit augue ultricies id. Cras ornare vitae sapien eu venenatis. Morbi eu felis maximus, pulvinar urna vitae, placerat sapien. Etiam ut elit convallis, dictum dolor quis, placerat ligula. Vestibulum rutrum ultrices ante, a sagittis eros sollicitudin ut.",
-            img_link: "https://random.imagecdn.app/1080/1080"
-        },
-        {
-            id: 4,
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dui turpis, ultricies nec ante eu, hendrerit ultricies tortor. In nec vestibulum felis, eget eleifend augue. Sed rutrum vitae dolor a tincidunt. Etiam consectetur mi lorem, ac suscipit augue ultricies id. Cras ornare vitae sapien eu venenatis. Morbi eu felis maximus, pulvinar urna vitae, placerat sapien. Etiam ut elit convallis, dictum dolor quis, placerat ligula. Vestibulum rutrum ultrices ante, a sagittis eros sollicitudin ut.",
-            img_link: "https://random.imagecdn.app/1080/1080"
-        },
-        {
-            id: 5,
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dui turpis, ultricies nec ante eu, hendrerit ultricies tortor. In nec vestibulum felis, eget eleifend augue. Sed rutrum vitae dolor a tincidunt. Etiam consectetur mi lorem, ac suscipit augue ultricies id. Cras ornare vitae sapien eu venenatis. Morbi eu felis maximus, pulvinar urna vitae, placerat sapien. Etiam ut elit convallis, dictum dolor quis, placerat ligula. Vestibulum rutrum ultrices ante, a sagittis eros sollicitudin ut.",
-            img_link: "https://random.imagecdn.app/1080/1080"
-        },
-        {
-            id: 6,
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dui turpis, ultricies nec ante eu, hendrerit ultricies tortor. In nec vestibulum felis, eget eleifend augue. Sed rutrum vitae dolor a tincidunt. Etiam consectetur mi lorem, ac suscipit augue ultricies id. Cras ornare vitae sapien eu venenatis. Morbi eu felis maximus, pulvinar urna vitae, placerat sapien. Etiam ut elit convallis, dictum dolor quis, placerat ligula. Vestibulum rutrum ultrices ante, a sagittis eros sollicitudin ut.",
-            img_link: "https://random.imagecdn.app/1080/1080"
-        },
-        {
-            id: 7,
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dui turpis, ultricies nec ante eu, hendrerit ultricies tortor. In nec vestibulum felis, eget eleifend augue. Sed rutrum vitae dolor a tincidunt. Etiam consectetur mi lorem, ac suscipit augue ultricies id. Cras ornare vitae sapien eu venenatis. Morbi eu felis maximus, pulvinar urna vitae, placerat sapien. Etiam ut elit convallis, dictum dolor quis, placerat ligula. Vestibulum rutrum ultrices ante, a sagittis eros sollicitudin ut.",
-            img_link: "https://random.imagecdn.app/1080/1080"
-        },
-        {
-            id: 8,
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dui turpis, ultricies nec ante eu, hendrerit ultricies tortor. In nec vestibulum felis, eget eleifend augue. Sed rutrum vitae dolor a tincidunt. Etiam consectetur mi lorem, ac suscipit augue ultricies id. Cras ornare vitae sapien eu venenatis. Morbi eu felis maximus, pulvinar urna vitae, placerat sapien. Etiam ut elit convallis, dictum dolor quis, placerat ligula. Vestibulum rutrum ultrices ante, a sagittis eros sollicitudin ut.",
-            img_link: "https://random.imagecdn.app/1080/1080"
-        },
-        {
-            id: 9,
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dui turpis, ultricies nec ante eu, hendrerit ultricies tortor. In nec vestibulum felis, eget eleifend augue. Sed rutrum vitae dolor a tincidunt. Etiam consectetur mi lorem, ac suscipit augue ultricies id. Cras ornare vitae sapien eu venenatis. Morbi eu felis maximus, pulvinar urna vitae, placerat sapien. Etiam ut elit convallis, dictum dolor quis, placerat ligula. Vestibulum rutrum ultrices ante, a sagittis eros sollicitudin ut.",
-            img_link: "https://random.imagecdn.app/1080/1080"
-        },
-    ]
+export function InstagramCarousel({posts}){
 
     return(
         <Flex w="100%" maxW="1500px" m="0 auto" mb="10px" h="100%">
@@ -91,9 +45,10 @@ export function InstagramCarousel(){
                 }}
                 >
                     {
+                        posts &&
                         posts.map(post => (
                             <SwiperSlide key={post.id}>
-                                <Img src={post.img_link} h="auto" w="100%" m="0 auto"/>
+                                <Img src={post.image_link} h="auto" w="100%" m="0 auto"/>
                                 <Text
                                     w="100%"
                                     h="100px"
@@ -104,7 +59,7 @@ export function InstagramCarousel(){
                                     color="white"
                                     p="10px"
                                     >
-                                      {stringShortner(post.description, 100)}</Text>
+                                      {stringShortner(post?.message, 100)}</Text>
                             </SwiperSlide>
                         ))
                     }
