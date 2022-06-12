@@ -1,6 +1,6 @@
 import { ChakraStyledOptions, Flex, Icon } from "@chakra-ui/react";
 import { FiCopy } from "react-icons/fi";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 
 interface CopyFieldProps extends ChakraStyledOptions{
     text: string;
@@ -34,11 +34,28 @@ export function CopyField({text, left, right, ...rest}: CopyFieldProps){
         justify="center"
         borderRadius={!right ? "0 10px 10px 0" : "10px 0 0 10px"}
         w="90%"
+        onClick={() => copyText()}
+        cursor="pointer"
+        zIndex={10}
+        _hover={{
+            background: "blue.500"
+        }}
+        transition="all ease-in-out 0.2s"
         {...rest}
         >
-            { !right && <Icon as={FiCopy} mr="10px" ml="10px" onClick={() => copyText()}/>}
+            <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            />
+
+            { !right && <Icon as={FiCopy} mr="10px" ml="10px"/>}
             {text}
-            { right && <Icon as={FiCopy} ml="10px" onClick={() => copyText()}/>}
+            { right && <Icon as={FiCopy} ml="10px"/>}
         </Flex>
     )
 }

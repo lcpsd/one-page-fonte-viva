@@ -47,7 +47,6 @@ export function PixSection(){
                         <CopyField text="13.425.720/0001-40" right/>
                     </Flex>
                 </Flex>
-        <ToastContainer />
         </Section>
     )
 }
