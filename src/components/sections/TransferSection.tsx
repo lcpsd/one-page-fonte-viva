@@ -18,8 +18,8 @@ export function TransferSection(){
           direction={{base:"column", '2xl':'row'}}
           position="relative"
           >
-          <BigTextFloating text="TRANSF" textColor="blue.500" left="-60rem" top="-8rem"/>
-          <BigTextFloating text="TRANSF" textColor="blue.500" right="-60rem" bottom="-10rem"/>
+          <BigTextFloating text="TRANSF" textColor="blue.500" left="40rem" top="-8rem"/>
+          <BigTextFloating text="TRANSF" textColor="blue.500" right="-40rem" bottom="-10rem"/>
           <Flex direction="column" align="left" flex={{base: '', '2xl':"1"}} justify="center">
             <Text fontSize={{base: '48px', '2xl': "76px"}} fontWeight="bold" color="white" mb="1rem" lineHeight={0.9}>TRANSFERÊNCIA</Text>
             <Text fontSize="76px" fontWeight="bold" color="blue.500" mb="1rem" lineHeight={0.9}>BANCÁRIA</Text>

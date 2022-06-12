@@ -1,8 +1,9 @@
-import { SimpleGrid, Text } from "@chakra-ui/react";
+import { Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import { FiClock } from "react-icons/fi";
 import { BigIconFloating } from "../BigIconFloating";
 import { Section } from "../current-section";
 import { HourCard } from "../HourCard";
+import {Parallax} from 'react-scroll-parallax'
 
 export function HoursSection(){
 
@@ -46,17 +47,23 @@ export function HoursSection(){
     ]
 
     return(
-        <Section id="hours" h="100%" minH="90vh" w="100%" maxW="1500px" m="0 auto" direction="column" justify="center" align="center" px="20px" position="relative">
-          <Text fontSize="48px" fontWeight="bold" color="blue.500" textAlign="right" mb="2rem" w="100%" maxW="900px">HORÁRIOS</Text>
-          <BigIconFloating icon={FiClock} iconColor="blue.500" left="-10rem" bottom="-5rem"/>
-          <BigIconFloating icon={FiClock} iconColor="blue.500" right="-10rem" bottom="15rem"/>
-          <SimpleGrid columns={{base: 1, '2xl': 2}} spacing={5} minH="300px">
-            {
-              hours.map(hour => (
-                <HourCard hourData={hour} key={hour.id}/>
-              ))
-            }
-          </SimpleGrid>
-        </Section>
-    )
+      <Section id="hours" h="100%" minH="90vh" w="100%" maxW="1500px" m="0 auto" direction="column" justify="center" align="center" px="20px" position="relative">
+        <Text fontSize="48px" fontWeight="bold" color="blue.500" textAlign="right" mb="2rem" w="100%" maxW="900px">HORÁRIOS</Text>
+        <Flex
+        as={Parallax}
+        speed={-50}
+        zIndex={-50}
+        >
+          <BigIconFloating icon={FiClock} iconColor="blue.500" left="-40rem" bottom="-40rem"/>
+          <BigIconFloating icon={FiClock} iconColor="blue.500" right="-40rem" bottom="-5rem"/>
+        </Flex>
+        <SimpleGrid columns={{base: 1, '2xl': 2}} spacing={5} minH="300px">
+          {
+            hours.map(hour => (
+              <HourCard hourData={hour} key={hour.id}/>
+            ))
+          }
+        </SimpleGrid>
+      </Section>
+)
 }

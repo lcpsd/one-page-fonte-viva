@@ -33,8 +33,8 @@ export function ActionsCarousel(){
 
             <Text textAlign="left" w="720px" fontSize="48px" fontWeight="bold" color="blue.500" mb="10">AÇÕES</Text>
 
-            <BigTextFloating text="AÇÕES" textColor="#38B8FF" left="-60rem" bottom="-15rem"/>
-            <BigTextFloating text="AÇÕES" textColor="#38B8FF" right="-60rem" bottom="15rem"/>
+            <BigTextFloating text="AÇÕES" textColor="#38B8FF" left="-80rem" bottom="-60rem"/>
+            <BigTextFloating text="AÇÕES" textColor="#38B8FF" right="-80rem" bottom="-20rem"/>
 
             <SimpleGrid columns={{base: 2, lg: 4}} spacing="40px" w={{base: "300px", lg: "100%"}} m="0 auto" maxW="800px">
                 {

@@ -4,6 +4,7 @@ import { CurrentSectionContextProvider } from "../components/current-section/Con
 import {MenuContextProvider} from "../contexts/MenuContext"
 import { theme } from "../styles/theme"
 import { CurrentSection } from "../components/current-section";
+import {ParallaxProvider} from 'react-scroll-parallax'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -15,9 +16,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   return(
     <CurrentSectionContextProvider>
       <MenuContextProvider>
-        <ChakraProvider resetCSS theme={theme}>
-          <Component {...pageProps} />
-        </ChakraProvider>
+        <ParallaxProvider>
+          <ChakraProvider resetCSS theme={theme}>
+            <Component {...pageProps} />
+          </ChakraProvider>
+        </ParallaxProvider>
       </MenuContextProvider>
       <CurrentSection/>
     </CurrentSectionContextProvider>
