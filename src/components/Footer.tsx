@@ -8,7 +8,7 @@ import {IoLogoAppleAppstore, IoLogoGooglePlaystore} from 'react-icons/io5'
 export function Footer(){
 
     return(
-        <Flex borderTop="1px" borderTopColor="gray.900" w="100%" direction="column" align="center" p="10px">
+        <Flex borderTop="1px" borderTopColor="blue.500" w="100vw" direction="column" align="center" p="10px">
             <Flex 
             color="white" 
             align="center" 
