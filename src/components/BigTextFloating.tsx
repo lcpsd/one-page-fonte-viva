@@ -1,4 +1,4 @@
-import { ChakraStyledOptions, Text } from "@chakra-ui/react";
+import { ChakraStyledOptions, Text, theme } from "@chakra-ui/react";
 
 interface BigTextFloatingProps extends ChakraStyledOptions{
     text: string;
@@ -17,7 +17,7 @@ export function BigTextFloating({text, textColor, ...rest}: BigTextFloatingProps
             color="transparent"
             letterSpacing="10px"
             css={{
-                '-webkit-text-stroke': '1px ' + textColor
+                '-webkit-text-stroke': '1px' + theme.colors.blue['500']
             }}
             >{text}</Text>
     )

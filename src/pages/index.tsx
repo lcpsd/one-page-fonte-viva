@@ -38,7 +38,7 @@ export default function Home() {
         
         <HoursSection />
 
-        <DocumentsSection />
+        {/* <DocumentsSection /> */}
     
         <FinancialSection />
 

@@ -51,7 +51,7 @@ export function Header(){
                 direction={{base:"column", lg:"row"}} 
                 gap={{base: "20px", lg: "40px" }}
                 textAlign={{base:"center", lg:"initial"}} 
-                fontSize={{base:"1.5rem", lg:"1rem"}}>
+                fontSize={{base:"1.5rem", lg:"1.1rem"}}>
                     <ActiveLink href="#home">
                         <Link>Início</Link>
                     </ActiveLink>
