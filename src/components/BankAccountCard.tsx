@@ -7,20 +7,6 @@ interface BankAccountCardProps extends ChakraStyledOptions{
 
 export function BankAccountCard({image_link, children, ...rest}: BankAccountCardProps){
 
-    // function copyText(){
-    //     navigator.clipboard.writeText(data.description)
-    //     toast.success(toastMsg, {
-    //         position: "top-right",
-    //         autoClose: 5000,
-    //         hideProgressBar: false,
-    //         closeOnClick: true,
-    //         pauseOnHover: true,
-    //         draggable: true,
-    //         progress: undefined,
-    //         theme: "dark"
-    //         });
-    // }
-
     return(
         <Flex 
         borderRadius="5px" 

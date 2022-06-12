@@ -14,6 +14,7 @@ import { FloatButton } from "../components/FloatButton";
 import { DocumentsSection } from "../components/sections/DocumentsSection";
 
 import 'react-toastify/dist/ReactToastify.css';
+import { PixSection } from "../components/sections/PixSection";
 
 export default function Home() {
 
@@ -37,6 +38,8 @@ export default function Home() {
         <ActionsCarousel />
         
         <HoursSection />
+
+        <PixSection />
 
         {/* <DocumentsSection /> */}
     

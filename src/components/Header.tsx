@@ -76,6 +76,10 @@ export function Header(){
                         <Link>Horários</Link>
                     </ActiveLink>
 
+                    <ActiveLink href="#pix">
+                        <Link>Pix</Link>
+                    </ActiveLink>
+
                     <ActiveLink href="#transfer">
                         <Link>Transferências</Link>
                     </ActiveLink>
