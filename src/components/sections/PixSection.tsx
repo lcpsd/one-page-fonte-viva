@@ -18,9 +18,10 @@ export function PixSection(){
         direction={{base: "column", lg: "row"}}
         >
                 <Flex flex="1" position="relative" display={{base:"none", lg: "initial"}}>
-                    <Flex  position="absolute" left="1rem" top="8rem" w="300px" direction="column" align="center">
+                    <Flex  position="absolute" left="1rem" top="6rem" w="300px" direction="column" align="center" color="white">
                         <Img src="/images/pix-logo-azul.svg" h="95px"/>
-                        <Img src="/images/qrcode.png" h="200px" w="200px" mt="2rem"/>
+                        <Img  src="/images/qrcode.svg" p="10px" borderRadius="10px" bg="black" border="1px" borderColor="white" h="200px" w="200px" mt="2rem"/>
+                        <Text fontSize="0.8em" mt="0.5rem">Escaneie com o app do banco</Text>
                     </Flex>
                     <Img src="/images/smartphone-structure.png" />
                 </Flex>
