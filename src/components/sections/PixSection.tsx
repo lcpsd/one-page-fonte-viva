@@ -15,12 +15,17 @@ export function PixSection(){
         m="0 auto"
         w="100%"
         maxW="1000px"
+        direction={{base: "column", '2xl': "row"}}
         >
-                <Flex flex="1">
-
+                <Flex flex="1" position="relative" display={{base:"none", '2xl': "initial"}}>
+                    <Flex  position="absolute" left="1rem" top="8rem" w="300px" direction="column" align="center">
+                        <Img src="/images/pix-logo-azul.svg" h="95px"/>
+                        <Img src="/images/qrcode.png" h="200px" w="200px" mt="2rem"/>
+                    </Flex>
+                    <Img src="/images/smartphone-structure.png" />
                 </Flex>
 
-                <Flex flex="1" direction="column" color="white" position="relative">
+                <Flex flex="1" direction="column" color="white" position="relative" justify="center">
 
                     <Box position="relative">
                         <Flex justify="flex-end" w="400px">
