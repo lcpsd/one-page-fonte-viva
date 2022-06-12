@@ -15,9 +15,9 @@ export function PixSection(){
         m="0 auto"
         w="100%"
         maxW="1000px"
-        direction={{base: "column", '2xl': "row"}}
+        direction={{base: "column", lg: "row"}}
         >
-                <Flex flex="1" position="relative" display={{base:"none", '2xl': "initial"}}>
+                <Flex flex="1" position="relative" display={{base:"none", lg: "initial"}}>
                     <Flex  position="absolute" left="1rem" top="8rem" w="300px" direction="column" align="center">
                         <Img src="/images/pix-logo-azul.svg" h="95px"/>
                         <Img src="/images/qrcode.png" h="200px" w="200px" mt="2rem"/>
@@ -40,7 +40,7 @@ export function PixSection(){
                         </Flex>
                     </Box>
 
-                    <Flex direction="column" mt="50px">
+                    <Flex direction="column" mt="50px" align="center">
                         <Text fontWeight="bold" fontSize="24px">NOSSAS CHAVES</Text>
 
                         <CopyField text="adm@igrejafonteviva.com.br" mb="20px"/>

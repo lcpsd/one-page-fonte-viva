@@ -33,7 +33,7 @@ export function CopyField({text, left, right, ...rest}: CopyFieldProps){
         align="center"
         justify="center"
         borderRadius={!right ? "0 10px 10px 0" : "10px 0 0 10px"}
-        w="100%"
+        w="90%"
         {...rest}
         >
             { !right && <Icon as={FiCopy} mr="10px" ml="10px" onClick={() => copyText()}/>}
