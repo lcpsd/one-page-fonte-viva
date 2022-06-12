@@ -1,4 +1,6 @@
 import { SimpleGrid, Text } from "@chakra-ui/react";
+import { FiClock } from "react-icons/fi";
+import { BigIconFloating } from "../BigIconFloating";
 import { Section } from "../current-section";
 import { HourCard } from "../HourCard";
 
@@ -44,9 +46,11 @@ export function HoursSection(){
     ]
 
     return(
-        <Section id="hours" h="100%" minH="90vh" w="100%" maxW="1500px" m="0 auto" direction="column" justify="center" align="center" px="20px">
-          <Text fontSize="2xl" fontWeight="bold" color="blue.500" textAlign="center" mb="2rem">Horários</Text>
-          <SimpleGrid columns={{base: 1, '2xl': 3}} spacing={5} minH="300px">
+        <Section id="hours" h="100%" minH="90vh" w="100%" maxW="1500px" m="0 auto" direction="column" justify="center" align="center" px="20px" position="relative">
+          <Text fontSize="48px" fontWeight="bold" color="blue.500" textAlign="right" mb="2rem" w="100%" maxW="900px">HORÁRIOS</Text>
+          <BigIconFloating icon={FiClock} iconColor="blue.500" left="-10rem" bottom="-5rem"/>
+          <BigIconFloating icon={FiClock} iconColor="blue.500" right="-10rem" bottom="15rem"/>
+          <SimpleGrid columns={{base: 1, '2xl': 2}} spacing={5} minH="300px">
             {
               hours.map(hour => (
                 <HourCard hourData={hour} key={hour.id}/>

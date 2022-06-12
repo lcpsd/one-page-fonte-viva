@@ -31,7 +31,7 @@ export function ActionsCarousel(){
         entries &&
         <Section id="actions" m="0 auto" w="100%" maxW="1500px" direction="column" align="center" justify="center" minH="90vh" position="relative">
 
-            <Text textAlign="left" w="720px" fontSize="36px" fontWeight="bold" color="blue.500" mb="10">AÇÕES</Text>
+            <Text textAlign="left" w="720px" fontSize="48px" fontWeight="bold" color="blue.500" mb="10">AÇÕES</Text>
 
             <BigTextFloating text="AÇÕES" textColor="#38B8FF" left="-60rem" bottom="-15rem"/>
             <BigTextFloating text="AÇÕES" textColor="#38B8FF" right="-60rem" bottom="15rem"/>
