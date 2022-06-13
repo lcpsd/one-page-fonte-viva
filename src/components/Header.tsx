@@ -3,14 +3,14 @@ import { ActiveLink } from './ActiveLink'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import { useMenuContext } from '../contexts/MenuContext'
 import { motion } from 'framer-motion'
-import { useIsLarge } from '../hooks/useMediaQuery'
+import { useIsLarge, useIsXlarge } from '../hooks/useMediaQuery'
 
 export function Header(){
 
     const {openMenu, setOpenMenu} = useMenuContext()
-    const isLarge = useIsLarge()
+    const isXLarge = useIsXlarge()
 
-    const variants = isLarge ? {
+    const variants = !isXLarge ? {
         visible:{opacity: 1, left: "0rem", zIndex: 10, transition: {ease: "easeIn", duration: 0.3}},
         hidden: {opacity: 0, left: "-30rem", transition: {ease: "easeOut", duration: 0.3}}
     } : {
@@ -50,7 +50,7 @@ export function Header(){
                 <Flex 
                 display="flex" 
                 direction={{base:"column", lg:"row"}} 
-                gap={{base: "20px", lg: "40px" }}
+                gap={{base: "20px", lg: "30px", '2xl': "40px" }}
                 textAlign={{base:"center", lg:"initial"}} 
                 fontSize={{base:"1.5rem", lg:"1.1rem"}}>
                     <ActiveLink href="#home">
