@@ -9,12 +9,6 @@ const CustomCarousel = styled.span`
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    
-    .swiper{
-        border-radius: 5px;
-        width: 100%;
-        height: 100%;
-    }
 
     .swiper-pagination-bullet{
         background-color: "#38B8FF";
@@ -45,11 +39,15 @@ export function HeaderCarousel(){
     }, [])
 
     return(
-        <Flex w={'100vw'} h={{base: "350px", lg: '500px'}} maxW='1500px' m='0 auto' className='carousel'>
+        <Flex w={'100vw'} h={{base: "100%", md: '500px'}} maxW='1500px' m='0 auto' className='carousel'>
             <CustomCarousel>
-                <Swiper
+                <Flex
+                as={Swiper}
                 modules={[Pagination, A11y]}
                 pagination={{ clickable: true }}
+                bg="red"
+                w="100%"
+                h="100%"
                 >
                     {
                         entries.map((entry: EntryProps) => (
@@ -61,13 +59,13 @@ export function HeaderCarousel(){
                                     h='100%'
                                     bgImage={entry.image_link}
                                     bgPosition="center"
-                                    bgSize={{base: "contain", lg: "cover"}}
+                                    bgSize="cover"
                                     bgRepeat="no-repeat"
                                 ></Box>
                             </SwiperSlide>
                         ))
                     }
-                </Swiper>
+                </Flex>
             </CustomCarousel>
         </Flex>
     )
