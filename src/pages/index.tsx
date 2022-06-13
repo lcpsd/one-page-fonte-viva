@@ -39,7 +39,7 @@ export default function Home({posts}:homeProps) {
       <Flex direction='column' m="0 auto" overflowX="hidden">
         <HeaderSection/>
 
-        <InstagramCarousel posts={posts} />
+        {/* <InstagramCarousel posts={posts} /> */}
 
         <HistorySection />
 

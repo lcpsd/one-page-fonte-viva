@@ -1,11 +1,12 @@
+import { Flex } from "@chakra-ui/react";
 import { Section } from "../current-section";
 import { HeaderCarousel } from "../HeaderCarousel";
 
 export function HeaderSection(){
 
     return(
-        <Section direction='column' id='home' h={{base: "100vh", md: "100%"}}>
+        <Flex direction='column' id='home' h={{base: "100vh", md: "100%"}}>
           <HeaderCarousel />
-        </Section>
+        </Flex>
     )
 }

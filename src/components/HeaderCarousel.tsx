@@ -45,7 +45,6 @@ export function HeaderCarousel(){
                 as={Swiper}
                 modules={[Pagination, A11y]}
                 pagination={{ clickable: true }}
-                bg="red"
                 w="100%"
                 h="100%"
                 >
