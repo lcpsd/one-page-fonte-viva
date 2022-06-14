@@ -39,7 +39,7 @@ export function HeaderCarousel(){
     }, [])
 
     return(
-        <Flex w={'100vw'} h={{base: "100%", md: '500px'}} maxW='1500px' m='0 auto' className='carousel'>
+        <Flex w={'100vw'} h={{base: "100%", md: '450px'}} maxW='1500px' m='0 auto' className='carousel'>
             <CustomCarousel>
                 <Flex
                 as={Swiper}

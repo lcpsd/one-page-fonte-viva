@@ -1,10 +1,10 @@
-import { Flex, Img, Text } from "@chakra-ui/react";
+import { Flex, Img, Link, Text } from "@chakra-ui/react";
 import { A11y, Navigation,} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
 import styled from 'styled-components'
 import { stringShortner } from "../utils/stringShortner";
+import { useEffect, useState } from "react";
 import axios from "axios";
-import { GetServerSideProps } from "next";
 
 const CustomCarousel = styled(Flex)`
     
@@ -20,7 +20,27 @@ const CustomCarousel = styled(Flex)`
     }
 `
 
-export function InstagramCarousel({posts}){
+interface EntryProps{
+    id: string;
+    type: string;
+    createAt: string;
+    image_link: string;  
+    link: string;
+    description: string; 
+}
+
+export function PostsCarousel(){
+
+    const[posts, setPosts] = useState<EntryProps[]>([])
+
+    async function fetchPosts(){
+        const {data} = await axios.get<EntryProps[]>("/api/contentful/posts")
+        setPosts(data)
+    }
+
+    useEffect(() => {
+        fetchPosts()
+    }, [])
 
     return(
         <Flex w="100%" maxW="1500px" m="0 auto" mb="10px" h="100%">
@@ -48,18 +68,20 @@ export function InstagramCarousel({posts}){
                         posts &&
                         posts.map(post => (
                             <SwiperSlide key={post.id}>
-                                <Img src={post.image_link} h="auto" w="100%" m="0 auto"/>
-                                <Text
-                                    w="100%"
-                                    h="100px"
-                                    position="absolute"
-                                    bottom="0"
-                                    right="0"
-                                    bgGradient='linear(to-t, black, transparent)'
-                                    color="white"
-                                    p="10px"
-                                    >
-                                      {stringShortner(post?.message, 100)}</Text>
+                                <Link href={post.link}>
+                                    <Img src={post.image_link} h="auto" w="100%" m="0 auto"/>
+                                    <Text
+                                        w="100%"
+                                        h="100px"
+                                        position="absolute"
+                                        bottom="0"
+                                        right="0"
+                                        bgGradient='linear(to-t, black, transparent)'
+                                        color="white"
+                                        p="10px"
+                                        >
+                                        {stringShortner(post?.description, 100)}</Text>
+                                </Link>
                             </SwiperSlide>
                         ))
                     }
