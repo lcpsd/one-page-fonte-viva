@@ -101,10 +101,9 @@ export function Header(){
               top="0"
               p="10px"
               align="center"
-              justify={!openMenu ? "space-between": "flex-end"}
+              justify='flex-end'
               zIndex={10}
               >
-                <Img src="/logo.png" h="50px" opacity={0.3} display={!openMenu ? "block": "none"}/>
                 <Icon as={!openMenu ? AiOutlineMenu : AiOutlineClose} color="white" fontSize="2rem" fontWeight="light"/>
             </Flex>
         </Box>
