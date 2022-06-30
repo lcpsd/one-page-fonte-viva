@@ -30,22 +30,26 @@ interface EntryProps{
 export function HeaderSection(){
 
     return(
-        <Section w={'100vw'} minH='85vh' maxW='1450px' m='0 auto' id='home' direction={{base:'column', xl:'row'}} pl={{xl:'10'}} position='relative' bg='blue'>
+        <Section w={'100vw'} h={{base:'100vh', xl:'85vh'}} maxW='1450px' m='0 auto' id='home' direction={{base:'column', xl:'row'}} pl={{xl:'10'}} position='relative'>
             {/* Text */}
            <Flex flex='1' direction='column' color='white' px={{base:'10', xl:'0'}} align={{base: 'center', xl: 'flex-start'}} justify='center' h='100%'>
 
-            <Text fontSize={{base:'18px', xl:'24px'}} lineHeight='1' textAlign='left' w='100%'>Igreja evangélica</Text>
+            <Text fontSize={{base:'18px', xl:'24px'}} lineHeight='1' textAlign={{base:'center', xl:'left'}} w='100%'>Igreja evangélica</Text>
 
-            <Text fontSize={{base:'80px', xl:'128px'}} lineHeight='1' textAlign='left' w='100%'>FONTE</Text>
+            <Text fontSize={{base:'80px', xl:'128px'}} lineHeight='1' textAlign={{base:'center', xl:'left'}} w='100%'>FONTE</Text>
 
-            <Text fontSize={{base:'80px', xl:'128px'}} color='blue.500' fontWeight='bold' lineHeight='0.8' textAlign='left' w='100%'>VIVA</Text>
+            <Text fontSize={{base:'80px', xl:'128px'}} color='blue.500' fontWeight='bold' lineHeight='0.8' textAlign={{base:'center', xl:'left'}} w='100%'>VIVA</Text>
 
-            <Text fontSize={{base:'24px', xl:'36px'}} fontWeight='normal' lineHeight='1' textAlign='left' w='100%' my='5'>A igreja do avivamento!</Text>
+            <Text fontSize={{base:'24px', xl:'36px'}} fontWeight='normal' lineHeight='1' textAlign={{base:'center', xl:'left'}} w='100%' my='5'>A igreja do avivamento!</Text>
             
             <Flex direction='column' position='relative' fontSize='20px'>
-              <Box position='absolute' h='120%' w='1px' background='white' left='-10px' top='0'></Box>
-              <Text w='100%' maxW='408px' mb='1rem'>Um ministério focado na presença do espírito santo, que transforma vidas e renova corações.</Text>
-              <Box w='100%' maxW='378px'>Através desta filosofia, nos tornamos <TextStronger text='imparáveis'/> e <TextStronger text='indesistíveis'/>.</Box>
+              <Box position='absolute' h='120%' w='1px' background='white' left='-10px' top='0' display={{base:'none', xl: 'block'}}></Box>
+              <Text
+                w='100%'
+                maxW='408px'
+                mb='1rem'
+                textAlign={{base:'center', xl:'left'}}>Um ministério focado na presença do espírito santo, que transforma vidas e renova corações.</Text>
+              <Box w='100%' maxW='378px' textAlign={{base:'center', xl:'left'}}>Através desta filosofia, nos tornamos <TextStronger text='imparáveis'/> e <TextStronger text='indesistíveis'/>.</Box>
             </Flex>
            </Flex>
           
