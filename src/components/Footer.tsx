@@ -39,7 +39,7 @@ export function Footer(){
                 </SimpleGrid>
             </Flex>
 
-            <Text color="gray.600" textAlign="center">© 2011 – {new Date().getFullYear()} Igreja Fonte Viva Todos os Direitos Reservados.</Text>
+            <Text color="gray.600" textAlign="center" px='10px'>© 2011 – {new Date().getFullYear()} Igreja Fonte Viva Todos os Direitos Reservados.</Text>
         </Flex>
     )
 }
