@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Section } from "./current-section";
-import { VerticalCarousel } from "./VerticalCarousel";
+import { Section } from "../current-section";
+import { VerticalCarousel } from "../VerticalCarousel";
 
 interface EntryProps{
     id: string;
@@ -12,7 +12,7 @@ interface EntryProps{
     description: string;
 }
 
-export function PastorsCarousel(){
+export function PastorsSection(){
     const[entries, setEntries] = useState([])
 
     async function fetchHeaderData(){
@@ -26,7 +26,7 @@ export function PastorsCarousel(){
 
     return(
         entries &&
-        <Section id="pastors" w="100%" maxW="1500px" m="0 auto">
+        <Section id="pastors" w="100vw" maxW="1500px" m="0 auto">
           <VerticalCarousel data={entries} carouselTitle="Pastores"/>
         </Section>
     )

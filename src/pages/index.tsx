@@ -2,7 +2,7 @@ import { Flex, } from "@chakra-ui/react";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { ActionsCarousel } from "../components/sections/ActionsSection";
-import { PastorsCarousel } from "../components/PastorsCarousel";
+import { PastorsSection } from "../components/sections/PastorsSection";
 import { HoursSection } from "../components/sections/HoursSection";
 import { VisionSection } from "../components/sections/VisionSection";
 import { HistorySection } from "../components/sections/HistorySection";
@@ -32,7 +32,7 @@ export default function Home() {
 
         <VisionSection />
 
-        <PastorsCarousel />
+        <PastorsSection />
   
         <ActionsCarousel />
         
