@@ -10,7 +10,7 @@ export function GradientDiv({side, ...rest}:GradientDivProps){
         <Box
         {...rest}
           w='100%'
-          h='100%'
+          h='110%'
           bgGradient={`linear(${side}, black, transparent, transparent)`}
           position='absolute'
           top='0'

@@ -42,7 +42,14 @@ export function ActionsCarousel(){
                         <Flex direction="column" align="center" color="white" key={entry.id}>
                             <Menu>
                                 <MenuButton>
-                                    <Flex borderRadius="10px" bg="gray.900" align="center" justify="center" w="100px" h="100px">
+                                    <Flex 
+                                    borderRadius="10px" 
+                                    bg="gray.700" 
+                                    align="center" 
+                                    justify="center" 
+                                    w={{base:'100px', xl:"150px"}} 
+                                    h={{base:'100px', xl:"150px"}} 
+                                    p='1rem'>
                                         <Img src={entry.image_link}/>
                                     </Flex>
                                     <Text mt="10px">{entry.title}</Text>
