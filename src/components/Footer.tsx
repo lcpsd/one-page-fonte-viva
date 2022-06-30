@@ -26,7 +26,7 @@ export function Footer(){
 
                     <FooterIcon icon={AiFillInstagram} link="https://www.instagram.com/igrejafontevivaonline/"/>
 
-                    <FooterIcon icon={BsFacebook} link="https://www.facebook.com/IgrejaFonteViva"/>
+                    <FooterIcon icon={BsFacebook} link="https://www.facebook.com/IgrejaFonteVivaOnline"/>
 
                     <FooterIcon icon={BsSpotify} link="https://open.spotify.com/show/4udkQ3vEpq9quj9Wcnd2s9?si=2749b33bbd2f4761"/>
 
