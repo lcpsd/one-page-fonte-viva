@@ -1,5 +1,6 @@
 import {DescriptionSection} from './DescriptionSection'
 import { Box, Flex, Text } from "@chakra-ui/react";
+import { GradientDiv } from '../GradientDiv';
 
 export function HistorySection(){
     return(
@@ -7,8 +8,19 @@ export function HistorySection(){
         bgImageLink="/images/igreja.jpg"
         id='history'
         justify='flex-end'
+        h='100%'
         >
-          <Box h="100%" w="100%" maxW='800px' bgGradient='linear(to-l, black, transparent)' position='absolute'></Box>
+          <GradientDiv side="to-l" display={{base:'none', xl:'block'}}/>
+          <Box
+           w='100%'
+           h='100%'
+           bg='black'
+           position='absolute'
+           top='0'
+           left='0'
+           opacity={{base:'0.8', xl:'0'}}
+           ></Box>
+
           <Flex direction='column' align='flex-end' zIndex='10' justify='center' p='40px'>
             <Text fontSize='2rem' color='blue.400' fontWeight='bold' textAlign={{base:"center", lg:"right"}} w="100%">Nossa História</Text>
             <Text textAlign='justify' color='white' maxW='400px'>

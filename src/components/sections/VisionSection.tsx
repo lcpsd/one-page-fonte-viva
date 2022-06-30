@@ -1,4 +1,5 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
+import { GradientDiv } from "../GradientDiv";
 import { DescriptionSection } from "./DescriptionSection";
 
 export function VisionSection(){
@@ -7,8 +8,20 @@ export function VisionSection(){
         <DescriptionSection
         id="vision"
         bgImageLink="/images/elias.jpg"
+        h={{base: '100vh', xl: '85vh'}}
         >
-          <Box h="100%" w="100%" maxW='800px' bgGradient='linear(to-r, black, transparent)' position='absolute' left='0'></Box>
+          <GradientDiv side="to-r" display={{base:'none', xl:'block'}}/>
+
+          <Box
+           w='100%'
+           h='100%'
+           bg='black'
+           position='absolute'
+           top='0'
+           left='0'
+           opacity={{base:'0.7', xl:'0'}}
+           ></Box>
+
           <Flex direction='column' zIndex='10' justify='center' p='40px' textAlign={{base:"center", lg:"left"}}>
             <Text fontSize='2rem' color='blue.400' fontWeight='bold'>Nossa Visão</Text>
             <Text textAlign='justify' color='white' maxW='400px'>
