@@ -18,7 +18,7 @@ export function LocationSection(){
               CEP: 79118-151 <br/>
               </Text>
               
-              <Flex bg='red' justify={{base: 'center', xl: 'flex-start'}}>
+              <Flex justify={{base: 'center', xl: 'flex-start'}}>
                 <a href="tel:+5567992221076">
                   <Button bg='blue.500' color='black' colorScheme='blue' size='sm' mt={2}>(67) 99222-1076</Button>
                 </a>
