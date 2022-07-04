@@ -55,8 +55,8 @@ export function HeaderSection(){
               <Box w='100%' maxW='378px' textAlign={{base:'center', xl:'left'}}>Através desta filosofia, nos tornamos <TextStronger text='imparáveis'/> e <TextStronger text='indesistíveis'/>.</Box>
             </Flex>
             <Flex direction='column' px='5px' w='100%' align={{base:'center', xl:'flex-start'}}>
-                    <ExternalLinkButton icon={DiCelluloid} iconSize={70} title='Encontre uma célula'/>
-                    <ExternalLinkButton icon={FaPrayingHands} iconSize={30} title='Peça uma oração'/>
+                    <ExternalLinkButton icon={DiCelluloid} iconSize={70} title='Encontre uma célula' link='https://url.gratis/ZfLRMo'/>
+                    <ExternalLinkButton icon={FaPrayingHands} iconSize={30} title='Peça uma oração' link='https://wa.me/556792221076?text=Gostaria%20de%20receber%20uma%20ora%C3%A7%C3%A3o'/>
                 </Flex>
            </Flex>
 
