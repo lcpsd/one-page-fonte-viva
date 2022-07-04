@@ -19,7 +19,7 @@ export function LocationSection(){
               </Text>
               
               <a href="tel:+5567992221076">
-                <Button bg='blue.500' color='black' colorScheme='blue' size='sm' mt={2}>Fone: (67) 99222-1076</Button>
+                <Button bg='blue.500' color='black' colorScheme='blue' size='sm' mt={2}>(67) 99222-1076</Button>
               </a>
             </Flex>
           </SimpleGrid>
