@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Img, Menu, MenuButton, MenuList, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Img, Menu, MenuButton, MenuList, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import api from "../../services/axios";
@@ -13,6 +13,8 @@ interface EntryProps{
     image_link: string;
     title: string;
     description: string;
+    leaders: string;
+    social?: string;
 }
 
 export function ActionsCarousel(){
@@ -31,7 +33,8 @@ export function ActionsCarousel(){
         entries &&
         <Section id="actions" m="0 auto" w="100%" maxW="1500px" direction="column" align="center" justify="center" minH="90vh" position="relative">
 
-            <Text maxW="720px" w="100%" textAlign={{base: "center", '2xl': "left"}} fontSize="48px" fontWeight="bold" color="blue.500" mb="10">AÇÕES</Text>
+            <Text maxW="780px" w="100%" textAlign={{base: "center", '2xl': "left"}} fontSize="48px" fontWeight="bold" color="blue.500" mb="2">AÇÕES</Text>
+            <Text maxW="780px" w="100%" textAlign={{base: "center", '2xl': "left"}} color='white' mb='4'>Somos quase 300 voluntários que servem e inspiram pessoas diariamente em suas Ações, desenvolvendo seus dons e talentos, para edificar a igreja de Cristo.</Text>
 
             <BigTextFloating text="AÇÕES" textColor="#38B8FF" left="-80rem" bottom="-60rem"/>
             <BigTextFloating text="AÇÕES" textColor="#38B8FF" right="-80rem" bottom="-20rem"/>
@@ -54,10 +57,19 @@ export function ActionsCarousel(){
                                     </Flex>
                                     <Text mt="10px">{entry.title}</Text>
                                 </MenuButton>
-                                <MenuList p="10px" bg="gray.900" border="0" w="100px">
-                                    <Text>
-                                        {entry.description}
-                                    </Text>
+                                <MenuList p="10px" bg="gray.900" border="0" w="100px" mt='-40px'>
+                                    <VStack spacing={5}>
+                                        <Text>
+                                            {entry.description}
+                                        </Text>
+                                        <Text>
+                                            Líderes:
+                                            {' ' + entry.leaders}
+                                        </Text>
+                                        <Text>
+                                            {entry?.social}
+                                        </Text>
+                                    </VStack>
                                 </MenuList>
                             </Menu>
                         </Flex>

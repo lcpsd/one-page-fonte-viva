@@ -20,6 +20,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
                         image_link: entry.fields.image.fields.file.url,
                         title: entry.fields.title,
                         description: entry.fields.description,
+                        leaders: entry.fields.leaders,
+                        social: entry.fields.social
                     }
                 ))
 
