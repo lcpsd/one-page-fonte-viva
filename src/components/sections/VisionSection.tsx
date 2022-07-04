@@ -7,6 +7,7 @@ export function VisionSection(){
     return(
         <DescriptionSection
         id="vision"
+        bgPosition={{base: "50% 50%", xl: '100% 0%'}}
         bgImageLink="/images/elias.jpg"
         h={{base: '100vh', xl: '85vh'}}
         >
