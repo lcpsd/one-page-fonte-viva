@@ -1,4 +1,4 @@
-import { Flex, Img, SimpleGrid, Text } from "@chakra-ui/react";
+import { Button, Flex, Img, SimpleGrid, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { Section } from "../current-section";
 
@@ -17,7 +17,10 @@ export function LocationSection(){
               Cidade: Campo Grande - MS <br/>
               CEP: 79118-151 <br/>
               </Text>
-              <Text mt={10}>Fone: (67) 99222-1076</Text>
+              
+              <a href="tel:+5567992221076">
+                <Button bg='blue.500' color='black' colorScheme='blue' size='sm' mt={2}>Fone: (67) 99222-1076</Button>
+              </a>
             </Flex>
           </SimpleGrid>
         </Section>
