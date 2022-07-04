@@ -24,7 +24,7 @@ export default function Home() {
         icon={RiWhatsappFill}
         text="Fale Conosco"
         visibleHeight={1000}
-        hideOffset={300}
+        hideOffset={100}
         url='https://wa.me/556792221076'
         />
       <Flex direction='column' m="0 auto" overflowX="hidden">

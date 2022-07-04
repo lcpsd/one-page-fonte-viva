@@ -1,11 +1,11 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { ChakraStyledOptions, Flex, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { IconType } from "react-icons";
 import { FooterIcon } from "./FooterIcon";
 
-interface FloatButtonProps{
+interface FloatButtonProps extends ChakraStyledOptions{
     icon: IconType;
     text?: string;
     visibleHeight: number;
@@ -13,7 +13,7 @@ interface FloatButtonProps{
     url: string;
 }
 
-export function FloatButton({icon, text, visibleHeight, hideOffset, url}:FloatButtonProps){
+export function FloatButton({icon, text, visibleHeight, hideOffset, url, ...rest}:FloatButtonProps){
 
     const [showBox, setShowBox] = useState(false)
 
@@ -25,7 +25,7 @@ export function FloatButton({icon, text, visibleHeight, hideOffset, url}:FloatBu
     function onScroll(){
         window.scrollY > visibleHeight && setShowBox(true)
         window.scrollY < visibleHeight && setShowBox(false)
-        window.scrollY <= visibleHeight || window.scrollY > ((document.body.offsetHeight - 1000)- hideOffset) && setShowBox(false)
+        window.scrollY <= visibleHeight || window.scrollY > ((document.body.offsetHeight - 700)- hideOffset) && setShowBox(false)
     }
 
     useEffect(() => {
@@ -50,6 +50,7 @@ export function FloatButton({icon, text, visibleHeight, hideOffset, url}:FloatBu
             variants={variants}
             initial="hidden"
             animate={showBox ? "visible" : "hidden"}
+            {...rest}
             >
                 <FooterIcon fontSize="3rem" icon={icon}/>
                 {text && <Text fontSize="1.5rem" color="white" mb="1rem" ml="1rem" cursor='pointer'>{text}</Text>}
