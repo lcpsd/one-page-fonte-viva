@@ -4,6 +4,9 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import { useMenuContext } from '../contexts/MenuContext'
 import { motion } from 'framer-motion'
 import { useIsLarge, useIsXlarge } from '../hooks/useMediaQuery'
+import { ExternalLinkButton } from './sections/ExternalLinkButton'
+import {DiCelluloid} from 'react-icons/di'
+import {FaPrayingHands} from 'react-icons/fa'
 
 export function Header(){
 

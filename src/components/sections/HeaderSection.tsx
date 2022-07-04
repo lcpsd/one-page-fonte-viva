@@ -6,6 +6,9 @@ import { TextStronger } from '../TestStronger';
 import { Section } from '../current-section';
 import { VideoBg } from '../VideoBg';
 import { GradientDiv } from '../GradientDiv';
+import { ExternalLinkButton } from './ExternalLinkButton';
+import { DiCelluloid } from 'react-icons/di';
+import { FaPrayingHands } from 'react-icons/fa';
 
 const CustomCarousel = styled.span`
     width: 100%;
@@ -36,13 +39,13 @@ export function HeaderSection(){
 
             <Text fontSize={{base:'18px', xl:'24px'}} lineHeight='1' textAlign={{base:'center', xl:'left'}} w='100%'>Igreja evangélica</Text>
 
-            <Text fontSize={{base:'80px', xl:'128px'}} lineHeight='1' textAlign={{base:'center', xl:'left'}} w='100%'>FONTE</Text>
+            <Text fontSize={{base:'80px', xl:'100px'}} lineHeight='1' textAlign={{base:'center', xl:'left'}} w='100%'>FONTE</Text>
 
-            <Text fontSize={{base:'80px', xl:'128px'}} color='blue.500' fontWeight='bold' lineHeight='0.8' textAlign={{base:'center', xl:'left'}} w='100%'>VIVA</Text>
+            <Text fontSize={{base:'80px', xl:'100px'}} color='blue.500' fontWeight='bold' lineHeight='0.8' textAlign={{base:'center', xl:'left'}} w='100%'>VIVA</Text>
 
-            <Text fontSize={{base:'24px', xl:'36px'}} fontWeight='normal' lineHeight='1' textAlign={{base:'center', xl:'left'}} w='100%' my='5'>A igreja do avivamento!</Text>
+            <Text fontSize='24px' fontWeight='normal' lineHeight='1' textAlign={{base:'center', xl:'left'}} w='100%' my='5'>A igreja do avivamento!</Text>
             
-            <Flex direction='column' position='relative' fontSize='20px'>
+            <Flex direction='column' position='relative' fontSize='18px'>
               <Box position='absolute' h='120%' w='1px' background='white' left='-10px' top='0' display={{base:'none', xl: 'block'}}></Box>
               <Text
                 w='100%'
@@ -51,7 +54,12 @@ export function HeaderSection(){
                 textAlign={{base:'center', xl:'left'}}>Um ministério focado na presença do espírito santo, que transforma vidas e renova corações.</Text>
               <Box w='100%' maxW='378px' textAlign={{base:'center', xl:'left'}}>Através desta filosofia, nos tornamos <TextStronger text='imparáveis'/> e <TextStronger text='indesistíveis'/>.</Box>
             </Flex>
+            <Flex direction='column' px='5px' w='100%' align={{base:'center', xl:'flex-start'}}>
+                    <ExternalLinkButton icon={DiCelluloid} iconSize={70} title='Encontre uma célula'/>
+                    <ExternalLinkButton icon={FaPrayingHands} iconSize={30} title='Peça uma oração'/>
+                </Flex>
            </Flex>
+
           
            <Flex
              flex='1.8'
