@@ -11,8 +11,10 @@ export function LocationSection(){
               <Text textAlign={{base:"center", lg: "left"}}>
               Rua: Avenida Mascarenhas de Moraes, 6854 <br/>
               Bairro: São Francisco<br/>
-              Cidade: Campo Grande - MS
+              Cidade: Campo Grande - MS <br/>
+              CEP: 79118-151 <br/>
               </Text>
+              <Text mt={10}>Fone: (67) 99222-1076</Text>
             </Flex>
           </SimpleGrid>
         </Section>
