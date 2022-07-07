@@ -34,7 +34,7 @@ export function Header(){
         }}>
             <Flex
                 bg="black"
-                maxW="1120px"
+                maxW="1200px"
                 w={{base:"100%", lg:"initial"}}
                 m="0 auto"
                 h={{base:"100vh", lg:"120px"}}
@@ -86,6 +86,10 @@ export function Header(){
 
                     <ActiveLink href="#transfer">
                         <Link>Transferências</Link>
+                    </ActiveLink>
+
+                    <ActiveLink href="#app">
+                        <Link>App</Link>
                     </ActiveLink>
 
                     <ActiveLink href="#location">

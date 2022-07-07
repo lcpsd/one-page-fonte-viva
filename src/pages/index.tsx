@@ -14,6 +14,7 @@ import { FloatButton } from "../components/FloatButton";
 
 import 'react-toastify/dist/ReactToastify.css';
 import { PixSection } from "../components/sections/PixSection";
+import { AppSection } from "../components/sections/AppSection";
 
 export default function Home() {
 
@@ -43,6 +44,8 @@ export default function Home() {
         <PixSection />
     
         <TransferSection />
+
+        <AppSection />
 
         <LocationSection />      
         
