@@ -1,13 +1,17 @@
 import { ChakraStyledOptions, Flex, Icon } from "@chakra-ui/react";
+import { useState } from "react";
+import { BsCheck } from "react-icons/bs";
 import { FiCopy } from "react-icons/fi";
 import { toast, ToastContainer } from "react-toastify";
 
 interface CopyFieldProps extends ChakraStyledOptions{
     text: string;
     right?: boolean;
+    copiedText: string;
+    copyFn: (text: string) => void;
 }
 
-export function CopyField({text, left, right, ...rest}: CopyFieldProps){
+export function CopyField({text, left, right, copiedText, copyFn, ...rest}: CopyFieldProps){
 
     function copyText(){
         navigator.clipboard.writeText(text)
@@ -19,7 +23,8 @@ export function CopyField({text, left, right, ...rest}: CopyFieldProps){
             draggable: true,
             progress: undefined,
             theme: "dark"
-            });
+        });
+        copyFn(text)
     }
 
     return(
@@ -36,6 +41,7 @@ export function CopyField({text, left, right, ...rest}: CopyFieldProps){
         onClick={() => copyText()}
         cursor="pointer"
         zIndex={10}
+        bg={copiedText == text ? 'blue.500' : 'transparent'}
         _hover={{
             background: "blue.500"
         }}
@@ -55,9 +61,9 @@ export function CopyField({text, left, right, ...rest}: CopyFieldProps){
             pauseOnFocusLoss
             />
 
-            { !right && <Icon as={FiCopy} mr="10px" ml="10px"/>}
+            { !right && <Icon as={copiedText == text ? BsCheck : FiCopy} mr="10px" ml="10px" fontSize='1.5rem'/>}
             {text}
-            { right && <Icon as={FiCopy} ml="10px"/>}
+            { right && <Icon as={copiedText == text ? BsCheck : FiCopy} ml="10px" fontSize='1.5rem'/>}
         </Flex>
     )
 }

@@ -1,10 +1,13 @@
 import { Box, Flex, Img, Text } from "@chakra-ui/react";
+import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { Section } from "../current-section";
 import { GhostText } from "../GhostText";
 import { CopyField } from "./CopyField";
 
 export function PixSection(){
+
+    const [copiedText, setCopiedText] = useState('')
 
     return(
         <Section
@@ -44,8 +47,8 @@ export function PixSection(){
                     <Flex direction="column" mt="50px" align="center">
                         <Text fontWeight="bold" fontSize="24px">NOSSAS CHAVES</Text>
 
-                        <CopyField text="adm@igrejafonteviva.com.br" mb="20px"/>
-                        <CopyField text="13.425.720/0001-40" right/>
+                        <CopyField text="adm@igrejafonteviva.com.br" mb="20px" copiedText={copiedText} copyFn={setCopiedText}/>
+                        <CopyField text="13.425.720/0001-40" right copiedText={copiedText} copyFn={setCopiedText}/>
                     </Flex>
                 </Flex>
         </Section>
