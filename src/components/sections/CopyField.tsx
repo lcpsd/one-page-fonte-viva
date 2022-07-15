@@ -13,8 +13,21 @@ interface CopyFieldProps extends ChakraStyledOptions{
 
 export function CopyField({text, left, right, copiedText, copyFn, ...rest}: CopyFieldProps){
 
-    function copyText(){
-        navigator.clipboard.writeText(text)
+    async function copyText(){
+
+        if(navigator?.clipboard?.writeText) await navigator.clipboard.writeText(text)
+        else{
+            const el = document.createElement('textarea');
+            el.value = text;
+            el.setAttribute('readonly', '');
+            el.style.position = 'absolute';
+            el.style.left = '-9999px';
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+        }
+
         toast.info("Copiado!", {
             position: "top-right",
             autoClose: 5000,
@@ -29,6 +42,7 @@ export function CopyField({text, left, right, copiedText, copyFn, ...rest}: Copy
 
     return(
         <Flex
+        id='copy-field'
         px="20px"
         border="1px"
         borderColor="blue.500"
@@ -40,7 +54,7 @@ export function CopyField({text, left, right, copiedText, copyFn, ...rest}: Copy
         w="90%"
         onClick={() => copyText()}
         cursor="pointer"
-        zIndex={10}
+        zIndex='100'
         bg={copiedText == text ? 'blue.500' : 'transparent'}
         _hover={{
             background: "blue.500"
@@ -50,6 +64,7 @@ export function CopyField({text, left, right, copiedText, copyFn, ...rest}: Copy
         >
             <Flex
             as={ToastContainer}
+            direction='column'
             position="fixed"
             top={{base:"5rem",lg:"10rem"}}
             right="-8rem"
