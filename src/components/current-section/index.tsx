@@ -33,6 +33,8 @@ export function CurrentSection(){
             })
         }
     }, [])
+
+    return (<></>)
 }
 
 export function Section({children, id, ...rest}: SectionProps){
@@ -40,13 +42,6 @@ export function Section({children, id, ...rest}: SectionProps){
     const [isCurrent, setIsCurrent] = useState<boolean>()
 
     const {currentSection} = useCurrentSectionContext()
-
-    function handleScrollTo(id: string){
-        document.getElementById(id).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          })
-    }
     
     useEffect(() => {
         currentSection === id ? setIsCurrent(true) : setIsCurrent(false)
@@ -58,7 +53,6 @@ export function Section({children, id, ...rest}: SectionProps){
           opacity={isCurrent ? 1 : 0}
           id={id}
           className='current-section-node'
-          onClick={() => handleScrollTo(id)}
           {...rest}
           >
             {children}

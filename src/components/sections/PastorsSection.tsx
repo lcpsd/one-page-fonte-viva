@@ -19,7 +19,6 @@ export function PastorsSection(){
     async function fetchHeaderData(){
         const {data} = await axios.get<EntryProps[]>("/api/contentful/pastors")
         const dataSort = data.sort((a, b) => a.order - b.order)
-        console.log(dataSort)
         setEntries(dataSort)
     }
 
