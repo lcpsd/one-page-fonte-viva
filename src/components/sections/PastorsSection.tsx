@@ -10,6 +10,7 @@ interface EntryProps{
     image_link: string;
     title: string;
     description: string;
+    order: number;
 }
 
 export function PastorsSection(){
@@ -17,7 +18,9 @@ export function PastorsSection(){
 
     async function fetchHeaderData(){
         const {data} = await axios.get<EntryProps[]>("/api/contentful/pastors")
-        setEntries(data)
+        const dataSort = data.sort((a, b) => a.order - b.order)
+        console.log(dataSort)
+        setEntries(dataSort)
     }
 
     useEffect(() => {
