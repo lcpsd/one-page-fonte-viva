@@ -33,7 +33,7 @@ export function PixSection(){
 
                     <Box position="relative">
                         <Flex justify="flex-end" w="400px">
-                            <Text fontSize="36px" fontWeight="bold" w="320px" textAlign="right" color="blue.500" lineHeight={8}>DÍZIMOS E OFERTAS COM</Text>
+                            <Text fontSize="36px" fontWeight="bold" w="400px" textAlign="right" color="blue.500" lineHeight={8}>DÍZIMOS, OFERTAS E PRIMÍCIAS COM</Text>
                         </Flex>
 
                         <Text fontSize="250px" fontWeight="bold" lineHeight="200px">PIX</Text>
