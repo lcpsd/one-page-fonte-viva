@@ -4,7 +4,7 @@ import { Section } from "../current-section";
 
 export function LocationSection(){
     return(
-        <Section id="location" h="100%" minH="75vh" w="100%" maxW="1200px" m="0 auto" justify="center" align="center" p="40px">
+        <Section id="location" h="100vh" minH="75vh" w="100%" maxW="1200px" m="0 auto" justify="center" align="center" p="40px">
           <SimpleGrid spacing={10} columns={{base: 1, lg: 2}}>
             <Link href='https://goo.gl/maps/aNWCwjcJxSyVTboX7'>
               <Img src="/images/map.png" cursor='pointer'/>

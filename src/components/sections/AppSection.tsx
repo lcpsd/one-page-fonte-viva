@@ -53,18 +53,18 @@ export function AppSection(){
             </Flex>
 
 
-            <Flex flex='3' align='center'>
+            <Flex flex='3' align='center' mb={{base: '15rem', xl: '0'}}>
                 <Flex direction='column' align={{base:'center', xl:'flex-end'}}>
                     <Text fontSize={{base: '60px', xl:'96px'}} fontWeight='bold' color='white' lineHeight='10px'>APLICATIVO</Text>
                     <Text fontSize={{base: '60px', xl:'96px'}} fontWeight='bold' color='blue.500'>FONTE VIVA</Text>
                     <Text color='white' fontSize='24px' w={{base:'100%', xl:'60%'}} mt={{base:'0rem', xl:'-2rem'}} mb='1rem' textAlign={{base:'center', xl:'right'}}>Desenvolvido para estretiar nossa comunhão e organizar a instituição</Text>
-                    <Flex cursor='pointer'>
-                        <Link href='https://apps.apple.com/br/app/igreja-fonte-viva/id1476545344'>
-                            <Img src="/images/app-store-button.png" h='60px' mr='10px'/>
-                        </Link>
-                        <Link href='https://play.google.com/store/apps/details?id=com.inpeace.igrejafonteviva.campogrande'>
-                            <Img src="/images/google-play-button.png" h='60px'/>
-                        </Link>
+                    <Flex direction={{base: 'column', xl: 'row'}} gap='10px'>
+                        <Box as='a' cursor='pointer' href='https://apps.apple.com/br/app/igreja-fonte-viva/id1476545344'>
+                            <Img src="/images/app-store-button.png" h='60px' mr='10px' w='200px'/>
+                        </Box>
+                        <Box as='a' cursor='pointer' href='https://play.google.com/store/apps/details?id=com.inpeace.igrejafonteviva.campogrande'>
+                            <Img src="/images/google-play-button.png" h='60px' w='200px'/>
+                        </Box>
                     </Flex>
                 </Flex>
             </Flex>
