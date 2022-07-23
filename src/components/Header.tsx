@@ -81,11 +81,7 @@ export function Header(){
                     </ActiveLink>
 
                     <ActiveLink href="#pix">
-                        <Link>Pix</Link>
-                    </ActiveLink>
-
-                    <ActiveLink href="#transfer">
-                        <Link>Transferências</Link>
+                        <Link>Dízimos Ofertas Primícias</Link>
                     </ActiveLink>
 
                     <ActiveLink href="#app">
