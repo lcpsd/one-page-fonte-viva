@@ -30,7 +30,7 @@ export function Header(){
         style={{
             top: 0,
             left: 0,
-            zIndex: 30
+            zIndex: 1000
         }}>
             <Flex
                 bg="black"
