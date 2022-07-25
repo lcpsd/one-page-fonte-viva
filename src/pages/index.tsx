@@ -15,12 +15,14 @@ import { FloatButton } from "../components/FloatButton";
 import 'react-toastify/dist/ReactToastify.css';
 import { PixSection } from "../components/sections/PixSection";
 import { AppSection } from "../components/sections/AppSection";
+import { NotificationModal } from "../components/NotificationModal";
 
 export default function Home() {
 
   return (
     <>
       <Header />
+      <NotificationModal />
       <FloatButton
         icon={RiWhatsappFill}
         text="Fale Conosco"
