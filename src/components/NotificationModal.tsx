@@ -12,6 +12,12 @@ interface NotificationProps{
   createAt: string;
 }
 
+const customCSS = `
+  *{
+    all: revert;
+  }
+`
+
 export function NotificationModal() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [notificationData, setNotificationData] = useState<NotificationProps[]>([])
@@ -37,11 +43,7 @@ export function NotificationModal() {
               <ModalContent bg='black' color='white' my='auto' mx='auto'>
                 <ModalHeader textAlign='center'>{notificationData[0].title}</ModalHeader>
                 <ModalCloseButton />
-                  <ModalBody css={`
-                  *{
-                    all: revert;
-                  }
-                `}>
+                  <ModalBody css={customCSS}>
                       <Img src={notificationData[0].cover} mb='1rem' borderRadius='5px' w='100%'/>
                       <Box dangerouslySetInnerHTML={{__html: documentToHtmlString(notificationData[0].html)}}></Box>
                   </ModalBody>
