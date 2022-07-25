@@ -23,13 +23,6 @@ const CustomCarousel = styled.span`
     }
 `
 
-interface EntryProps{
-    id: string;
-    type: string;
-    createAt: string;
-    image_link: string;   
-}
-
 export function HeaderSection(){
 
     return(
@@ -70,7 +63,7 @@ export function HeaderSection(){
              opacity={{base:'0.5', xl:'1'}}
              >
             <GradientDiv side='to-r' zIndex='10'/>
-            <VideoBg source='https://i.imgur.com/uiYcF6n.mp4' opacity={{base:'0.5', xl:'1'}} objectFit='cover'/>
+            <VideoBg source='/video/bg-header-video.mp4' opacity={{base:'0.5', xl:'1'}} objectFit='cover'/>
            </Flex>
         </Section>
     )
