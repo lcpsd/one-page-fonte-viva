@@ -18,7 +18,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
                         id: entry.sys.id,
                         title: entry.fields.title,
                         cover: entry.fields.cover.fields.file.url,
-                        html: documentToHtmlString(entry.fields?.text),
+                        html: entry.fields?.text,
                         createAt: entry.sys.createdAt,
                     }
                 ))
