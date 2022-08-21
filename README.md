@@ -1,4 +1,4 @@
-# A institutional on page react app
+# A institutional one page build with Next.js
 ![start screen](https://i.imgur.com/60gNmOy.png)
 
 ## How to run
